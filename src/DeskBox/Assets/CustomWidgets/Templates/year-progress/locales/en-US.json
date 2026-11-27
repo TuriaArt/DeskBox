@@ -1,0 +1,12 @@
+{
+  "widgetName": "Year Progress",
+  "widgetDescription": "How far through the year you are, with the current day-of-year and days left.",
+  "setStyle": "Display",
+  "optRing": "Ring",
+  "optBar": "Bar",
+  "subYear": "of the year",
+  "lblDay": "Day",
+  "lblLeft": "Left",
+  "lblDaysLeft": "days left",
+  "tipRefresh": "Refresh"
+}

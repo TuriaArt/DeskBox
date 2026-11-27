@@ -1,0 +1,12 @@
+{
+  "widgetName": "تقدّم الشهر",
+  "widgetDescription": "إلى أين وصل الشهر الحالي، مع الأيام المنقضية والمتبقية.",
+  "setStyle": "طريقة العرض",
+  "optRing": "حلقة",
+  "optBar": "شريط",
+  "subMonth": "من الشهر",
+  "lblDay": "اليوم",
+  "lblLeft": "متبقٍ",
+  "lblDaysLeft": "أيام متبقية",
+  "tipRefresh": "تحديث"
+}

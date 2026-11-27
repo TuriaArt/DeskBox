@@ -1,0 +1,13 @@
+{
+  "widgetName": "Tagesfortschritt",
+  "widgetDescription": "Wie viel vom heutigen Tag vergangen ist – mit verstrichener und verbleibender Zeit bis Mitternacht.",
+  "setStyle": "Darstellung",
+  "optRing": "Ring",
+  "optBar": "Balken",
+  "setSeconds": "Sekunden anzeigen",
+  "subDay": "des Tages",
+  "lblElapsed": "Vergangen",
+  "lblLeft": "Verbleibend",
+  "lblEnds": "Endet um",
+  "tipRefresh": "Aktualisieren"
+}

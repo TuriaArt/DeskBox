@@ -1,0 +1,13 @@
+{
+  "widgetName": "Day Progress",
+  "widgetDescription": "How much of today has passed, with time elapsed and time left until midnight.",
+  "setStyle": "Display",
+  "optRing": "Ring",
+  "optBar": "Bar",
+  "setSeconds": "Show seconds",
+  "subDay": "of the day",
+  "lblElapsed": "Elapsed",
+  "lblLeft": "Remaining",
+  "lblEnds": "Ends at",
+  "tipRefresh": "Refresh"
+}

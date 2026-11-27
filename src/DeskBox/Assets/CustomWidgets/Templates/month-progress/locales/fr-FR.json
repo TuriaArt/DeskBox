@@ -1,0 +1,12 @@
+{
+  "widgetName": "Progression du mois",
+  "widgetDescription": "Où en est le mois en cours, avec les jours écoulés et restants.",
+  "setStyle": "Affichage",
+  "optRing": "Anneau",
+  "optBar": "Barre",
+  "subMonth": "du mois",
+  "lblDay": "Jour",
+  "lblLeft": "Restant",
+  "lblDaysLeft": "jours restants",
+  "tipRefresh": "Actualiser"
+}

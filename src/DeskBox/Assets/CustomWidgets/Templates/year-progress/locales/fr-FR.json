@@ -1,0 +1,12 @@
+{
+  "widgetName": "Progression de l'année",
+  "widgetDescription": "Où en est l'année, avec le jour de l'année actuel et les jours restants.",
+  "setStyle": "Affichage",
+  "optRing": "Anneau",
+  "optBar": "Barre",
+  "subYear": "de l'année",
+  "lblDay": "Jour",
+  "lblLeft": "Restant",
+  "lblDaysLeft": "jours restants",
+  "tipRefresh": "Actualiser"
+}

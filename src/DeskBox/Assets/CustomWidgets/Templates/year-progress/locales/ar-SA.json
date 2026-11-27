@@ -1,0 +1,12 @@
+{
+  "widgetName": "تقدّم السنة",
+  "widgetDescription": "إلى أين وصلت السنة، مع رقم اليوم الحالي والأيام المتبقية.",
+  "setStyle": "طريقة العرض",
+  "optRing": "حلقة",
+  "optBar": "شريط",
+  "subYear": "من السنة",
+  "lblDay": "اليوم",
+  "lblLeft": "متبقٍ",
+  "lblDaysLeft": "أيام متبقية",
+  "tipRefresh": "تحديث"
+}

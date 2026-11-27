@@ -1,4 +1,4 @@
-﻿using System.Collections.Concurrent;
+using System.Collections.Concurrent;
 using System.Collections.Frozen;
 using System.Globalization;
 using System.Text;
@@ -56,6 +56,11 @@ public static class CustomWidgetTemplates
     public const string SnippetGridTemplateId = "snippet-grid";
     public const string WeatherDeskTemplateId = "weather-desk";
     public const string TodoAgendaTemplateId = "todo-agenda";
+    public const string DayProgressTemplateId = "day-progress";
+    public const string MonthProgressTemplateId = "month-progress";
+    public const string YearProgressTemplateId = "year-progress";
+    public const string StopwatchTemplateId = "stopwatch";
+    public const string TimerTemplateId = "timer";
 
     private static readonly BuiltInTemplateMetadata[] BuiltInTemplateCatalog =
     [
@@ -72,7 +77,12 @@ public static class CustomWidgetTemplates
         new(HydrationStarterId, "CustomWidget.AiWizard.Chip.Water.Label", "CustomWidget.Workshop.Card.Water.Desc", "💧", "#0EA5E9", "", "\uEB42"),
         new(AiInboxStarterId, "CustomWidget.Studio.Starter.AiInbox.Label", "CustomWidget.Workshop.Card.AiInbox.Desc", "✨", "#8B5CF6", "", "\uE8F2"),
         new(NewsRssStarterId, "CustomWidget.Studio.Starter.NewsRss.Label", "CustomWidget.Workshop.Card.NewsRss.Desc", "📰", "#F59E0B", "", "\uE90A"),
-        new(AgentHudTemplateId, "CustomWidget.Studio.Starter.AgentHud.Label", "CustomWidget.Workshop.Card.AgentHud.Desc", "🤖", "#3B82F6", "", "\uE99A")
+        new(AgentHudTemplateId, "CustomWidget.Studio.Starter.AgentHud.Label", "CustomWidget.Workshop.Card.AgentHud.Desc", "🤖", "#3B82F6", "", "\uE99A"),
+        new(DayProgressTemplateId, "CustomWidget.Template.DayProgress.Name", "CustomWidget.Template.DayProgress.Description", "🌅", "#F59E0B", "", "\uE706"),
+        new(MonthProgressTemplateId, "CustomWidget.Template.MonthProgress.Name", "CustomWidget.Template.MonthProgress.Description", "🌗", "#3B82F6", "", "\uE8BF"),
+        new(YearProgressTemplateId, "CustomWidget.Template.YearProgress.Name", "CustomWidget.Template.YearProgress.Description", "🗓️", "#8B5CF6", "", "\uE8C0"),
+        new(StopwatchTemplateId, "CustomWidget.Template.Stopwatch.Name", "CustomWidget.Template.Stopwatch.Description", "⏱️", "#10B981", "", "\uE823"),
+        new(TimerTemplateId, "CustomWidget.Template.Timer.Name", "CustomWidget.Template.Timer.Description", "⏲️", "#F43F5E", "", "\uE81C")
     ];
 
     private static readonly FrozenDictionary<string, BuiltInTemplateMetadata> BuiltInTemplateById =

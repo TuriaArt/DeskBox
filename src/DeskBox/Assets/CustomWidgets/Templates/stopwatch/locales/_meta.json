@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "baseLocale": "en-US",
+  "hashes": {
+    "btnLap": "a2baa08c",
+    "btnPause": "858e4ba7",
+    "btnReset": "daee7606",
+    "btnStart": "e4bb9f1e",
+    "emptyHint": "08b0bb2b",
+    "emptyTitle": "a02b7be3",
+    "lapsUnit": "a03e9a0e",
+    "lblLap": "a2baa08c",
+    "running": "c071cf5f",
+    "setLapSound": "c08a7720",
+    "setToggleSound": "958fc293",
+    "stopped": "8322e87d",
+    "tipRefresh": "0e916101",
+    "widgetDescription": "70d60465",
+    "widgetName": "cb880222"
+  }
+}

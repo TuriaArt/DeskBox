@@ -1,0 +1,12 @@
+{
+  "widgetName": "महीने की प्रगति",
+  "widgetDescription": "मौजूदा महीना कितना बीता, बीते और बचे दिनों के साथ।",
+  "setStyle": "प्रदर्शन",
+  "optRing": "रिंग",
+  "optBar": "बार",
+  "subMonth": "महीने का",
+  "lblDay": "दिन",
+  "lblLeft": "शेष",
+  "lblDaysLeft": "दिन शेष",
+  "tipRefresh": "रीफ़्रेश"
+}

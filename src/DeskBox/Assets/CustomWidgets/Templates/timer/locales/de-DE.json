@@ -1,0 +1,11 @@
+{
+  "widgetName": "Timer",
+  "widgetDescription": "Countdown mit einem Klick – 1, 5, 10, 30 oder 60 Minuten.",
+  "setDoneSound": "Ton bei Ablauf",
+  "btnStart": "Start",
+  "btnPause": "Pause",
+  "btnResume": "Fortsetzen",
+  "btnReset": "Zurücksetzen",
+  "doneToast": "Timer abgelaufen",
+  "tipRefresh": "Aktualisieren"
+}

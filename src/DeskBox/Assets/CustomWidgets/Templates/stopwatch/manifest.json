@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.stopwatch",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "⏱️",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "script-sandbox",
+    "visual-containers",
+    "micro-charts",
+    "forms-inputs",
+    "widget-settings",
+    "collections-lists",
+    "notifications-reminders",
+    "display-and-audio",
+    "advanced-inputs-and-styling"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 300
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 380
+  },
+  "settings": [
+    {
+      "key": "soundOnLap",
+      "type": "toggle",
+      "label": "${$i18n.setLapSound}",
+      "default": true
+    },
+    {
+      "key": "soundOnToggle",
+      "type": "toggle",
+      "label": "${$i18n.setToggleSound}",
+      "default": true
+    }
+  ],
+  "state": {
+    "running": false,
+    "baseMs": 0,
+    "since": 0,
+    "lapStartMs": 0,
+    "laps": []
+  },
+  "script": {
+    "entry": "logic.js",
+    "tickIntervalMs": 1000
+  },
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$computed.capsuleSummary}",
+    "glyph": "⏱️",
+    "badge": "${$computed.capsuleBadge}",
+    "primaryAction": {
+      "icon": "${$computed.running ? 'pause' : 'play'}",
+      "tooltip": "${$i18n.btnStart}",
+      "onClick": {
+        "type": "script.run",
+        "fn": "toggleRun"
+      }
+    }
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "sw_hero_card",
+        "sw_controls_grid",
+        "sw_laps_card"
+      ]
+    },
+    "sw_hero_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "14,10",
+      "spacing": 4,
+      "children": [
+        "sw_time",
+        "sw_lap_line"
+      ]
+    },
+    "sw_time": {
+      "type": "Text",
+      "dir": "ltr",
+      "text": "${$computed.elapsedText}",
+      "fontFamily": "mono",
+      "fontSize": 36,
+      "fontWeight": "semiBold",
+      "horizontalAlignment": "center",
+      "maxLines": 1
+    },
+    "sw_lap_line": {
+      "type": "Text",
+      "dir": "ltr",
+      "text": "${$i18n.lblLap} ${$computed.lapText}",
+      "style": "caption",
+      "color": "secondary",
+      "horizontalAlignment": "center",
+      "maxLines": 1
+    },
+    "sw_controls_grid": {
+      "type": "Grid",
+      "columns": "*,*,*",
+      "columnSpacing": 8,
+      "children": [
+        "sw_btn_toggle",
+        "sw_btn_lap",
+        "sw_btn_reset"
+      ]
+    },
+    "sw_btn_toggle": {
+      "type": "Button",
+      "column": 0,
+      "text": "${$computed.primaryLabel}",
+      "variant": "standard",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "toggleRun"
+      }
+    },
+    "sw_btn_lap": {
+      "type": "Button",
+      "column": 1,
+      "text": "${$i18n.btnLap}",
+      "variant": "subtle",
+      "horizontalAlignment": "stretch",
+      "when": "${$computed.running}",
+      "onClick": {
+        "type": "script.run",
+        "fn": "lap"
+      }
+    },
+    "sw_btn_reset": {
+      "type": "Button",
+      "column": 2,
+      "text": "${$i18n.btnReset}",
+      "variant": "subtle",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "reset"
+      }
+    },
+    "sw_laps_card": {
+      "type": "Card",
+      "tone": "default",
+      "padding": "8,6",
+      "when": "${$computed.showLaps}",
+      "children": [
+        "sw_laps_list"
+      ]
+    },
+    "sw_laps_list": {
+      "type": "List",
+      "items": "${$computed.laps}",
+      "itemTemplate": "sw_lap_row",
+      "variant": "divided",
+      "maxHeight": 150,
+      "emptyState": {
+        "icon": "⏱️",
+        "title": "${$i18n.emptyTitle}",
+        "subtitle": "${$i18n.emptyHint}"
+      }
+    },
+    "sw_lap_row": {
+      "type": "Grid",
+      "columns": "Auto,*,Auto",
+      "columnSpacing": 10,
+      "verticalAlignment": "center",
+      "children": [
+        "sw_lap_idx",
+        "sw_lap_name",
+        "sw_lap_time"
+      ]
+    },
+    "sw_lap_idx": {
+      "type": "Text",
+      "column": 0,
+      "text": "#${$item.idx}",
+      "style": "caption",
+      "color": "muted",
+      "verticalAlignment": "center"
+    },
+    "sw_lap_name": {
+      "type": "Text",
+      "column": 1,
+      "text": "${$i18n.lblLap} ${$item.idx}",
+      "style": "body",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "sw_lap_time": {
+      "type": "Text",
+      "column": 2,
+      "dir": "ltr",
+      "text": "${$item.timeStr}",
+      "style": "body",
+      "fontWeight": "semiBold",
+      "verticalAlignment": "center"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "widgetName": "Chronomètre",
+  "widgetDescription": "Démarrez, mettez en pause et enregistrez des tours depuis la barre ; la carte conserve chaque tour.",
+  "setLapSound": "Son à chaque tour",
+  "setToggleSound": "Son au démarrage/pause",
+  "lblLap": "Tour",
+  "btnStart": "Démarrer",
+  "btnPause": "Pause",
+  "btnLap": "Tour",
+  "btnReset": "Réinitialiser",
+  "lapsUnit": "tours",
+  "running": "en cours",
+  "stopped": "arrêté",
+  "emptyTitle": "Aucun tour pour le moment",
+  "emptyHint": "Appuyez sur Tour pendant le chrono pour enregistrer des temps intermédiaires",
+  "tipRefresh": "Actualiser"
+}

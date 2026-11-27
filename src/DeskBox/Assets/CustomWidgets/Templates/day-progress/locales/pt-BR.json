@@ -1,0 +1,13 @@
+{
+  "widgetName": "Progresso do dia",
+  "widgetDescription": "Quanto do dia já passou, com o tempo decorrido e o restante até a meia-noite.",
+  "setStyle": "Exibição",
+  "optRing": "Anel",
+  "optBar": "Barra",
+  "setSeconds": "Mostrar segundos",
+  "subDay": "do dia",
+  "lblElapsed": "Decorrido",
+  "lblLeft": "Restante",
+  "lblEnds": "Termina às",
+  "tipRefresh": "Atualizar"
+}

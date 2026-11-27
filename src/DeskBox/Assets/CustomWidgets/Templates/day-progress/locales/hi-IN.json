@@ -1,0 +1,13 @@
+{
+  "widgetName": "दिन की प्रगति",
+  "widgetDescription": "आज का कितना हिस्सा बीत चुका है, बीता समय और आधी रात तक बचा समय।",
+  "setStyle": "प्रदर्शन",
+  "optRing": "रिंग",
+  "optBar": "बार",
+  "setSeconds": "सेकंड दिखाएँ",
+  "subDay": "दिन का",
+  "lblElapsed": "बीता",
+  "lblLeft": "शेष",
+  "lblEnds": "समाप्ति",
+  "tipRefresh": "रीफ़्रेश"
+}

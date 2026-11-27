@@ -23,8 +23,8 @@ public sealed class CustomWidgetOfficialTemplateCleanlinessTests
     public void AllBuiltInTemplates_UseCanonicalIdsZeroDiagnosticsZeroDomDriftAndCompleteLocales()
     {
         IReadOnlyList<string> ids = CustomWidgetTemplates.BuiltInTemplateIds;
-        Assert.Equal(14, ids.Count);
-        Assert.Equal(14, CustomWidgetTemplates.Presets.Count);
+        Assert.Equal(19, ids.Count);
+        Assert.Equal(19, CustomWidgetTemplates.Presets.Count);
 
         Assert.Equal(
             ids.OrderBy(static x => x, StringComparer.Ordinal),
@@ -744,7 +744,7 @@ public sealed class CustomWidgetOfficialTemplateCleanlinessTests
     [Fact]
     public void AllFourteenOfficialTemplates_ValidateCleanlyWithDryRunAndNeverExportDeadOnSettingsChangedHook()
     {
-        Assert.Equal(14, CustomWidgetTemplates.BuiltInTemplateIds.Count);
+        Assert.Equal(19, CustomWidgetTemplates.BuiltInTemplateIds.Count);
         foreach (string id in CustomWidgetTemplates.BuiltInTemplateIds)
         {
             CustomWidgetTemplateBundle bundle = CustomWidgetTemplates.GetTemplateBundle(id);

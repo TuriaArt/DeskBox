@@ -231,7 +231,12 @@ internal sealed class StudioStartGalleryView : IDisposable
             (CustomWidgetTemplates.DevToolboxTemplateId, "🛠️", "CustomWidget.Template.DevToolbox.Name", "CustomWidget.Template.DevToolbox.Description", string.Empty, TemplateGalleryCategory.Tools),
             (CustomWidgetTemplates.SystemPulseTemplateId, "📊", "CustomWidget.Template.SystemPulse.Name", "CustomWidget.Template.SystemPulse.Description", "CustomWidget.AiWizard.Chip.Monitor.Prompt", TemplateGalleryCategory.Live),
             (CustomWidgetTemplates.AiPulseTemplateId, "🧠", "CustomWidget.Template.AiPulse.Name", "CustomWidget.Template.AiPulse.Description", string.Empty, TemplateGalleryCategory.Ai),
-            (CustomWidgetTemplates.AgentHudTemplateId, "🤖", "CustomWidget.Studio.Starter.AgentHud.Label", "CustomWidget.Workshop.Card.AgentHud.Desc", "CustomWidget.Studio.Starter.AgentHud.Prompt", TemplateGalleryCategory.Ai)
+            (CustomWidgetTemplates.AgentHudTemplateId, "🤖", "CustomWidget.Studio.Starter.AgentHud.Label", "CustomWidget.Workshop.Card.AgentHud.Desc", "CustomWidget.Studio.Starter.AgentHud.Prompt", TemplateGalleryCategory.Ai),
+            (CustomWidgetTemplates.DayProgressTemplateId, "🌅", "CustomWidget.Template.DayProgress.Name", "CustomWidget.Template.DayProgress.Description", string.Empty, TemplateGalleryCategory.Tools),
+            (CustomWidgetTemplates.MonthProgressTemplateId, "🌗", "CustomWidget.Template.MonthProgress.Name", "CustomWidget.Template.MonthProgress.Description", string.Empty, TemplateGalleryCategory.Tools),
+            (CustomWidgetTemplates.YearProgressTemplateId, "🗓️", "CustomWidget.Template.YearProgress.Name", "CustomWidget.Template.YearProgress.Description", string.Empty, TemplateGalleryCategory.Tools),
+            (CustomWidgetTemplates.StopwatchTemplateId, "⏱️", "CustomWidget.Template.Stopwatch.Name", "CustomWidget.Template.Stopwatch.Description", string.Empty, TemplateGalleryCategory.Tools),
+            (CustomWidgetTemplates.TimerTemplateId, "⏲️", "CustomWidget.Template.Timer.Name", "CustomWidget.Template.Timer.Description", string.Empty, TemplateGalleryCategory.Tools)
         ];
 
         var specs = new List<WorkshopCardSpec>(mergedOfficial.Count);

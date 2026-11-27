@@ -23,9 +23,14 @@ public sealed class CustomWidgetTests
     [InlineData(CustomWidgetTemplates.SnippetGridTemplateId)]
     [InlineData(CustomWidgetTemplates.WeatherDeskTemplateId)]
     [InlineData(CustomWidgetTemplates.TodoAgendaTemplateId)]
+    [InlineData(CustomWidgetTemplates.DayProgressTemplateId)]
+    [InlineData(CustomWidgetTemplates.MonthProgressTemplateId)]
+    [InlineData(CustomWidgetTemplates.YearProgressTemplateId)]
+    [InlineData(CustomWidgetTemplates.StopwatchTemplateId)]
+    [InlineData(CustomWidgetTemplates.TimerTemplateId)]
     public void BuiltInPresetTemplates_ParseWithoutErrors(string templateId)
     {
-        Assert.Equal(14, CustomWidgetTemplates.BuiltInTemplateIds.Count);
+        Assert.Equal(19, CustomWidgetTemplates.BuiltInTemplateIds.Count);
         CustomWidgetTemplateBundle bundle = CustomWidgetTemplates.GetTemplateBundle(templateId);
         Assert.DoesNotContain("\"i18n\"", bundle.ManifestJson, StringComparison.Ordinal);
         Assert.Equal(13, bundle.Locales.Locales.Count);
@@ -414,9 +419,9 @@ public sealed class CustomWidgetTests
         Assert.True(CustomWidgetTemplates.IsEmojiIcon("🗂️"));
         Assert.True(CustomWidgetTemplates.IsEmojiIcon("⏱️"));
 
-        // All 14 built-in presets carry distinct Emoji icons plus distinct Segoe Fluent PUA monochrome fallbacks
+        // All 19 built-in presets carry distinct Emoji icons plus distinct Segoe Fluent PUA monochrome fallbacks
         string[] presetIcons = CustomWidgetTemplates.Presets.Select(p => p.IconGlyph).ToArray();
-        Assert.Equal(14, presetIcons.Length);
+        Assert.Equal(19, presetIcons.Length);
         Assert.Equal(presetIcons.Length, presetIcons.Distinct(StringComparer.Ordinal).Count());
         Assert.All(presetIcons, icon =>
         {
@@ -974,7 +979,12 @@ public sealed class CustomWidgetTests
                 CustomWidgetTemplates.HydrationStarterId,
                 CustomWidgetTemplates.AiInboxStarterId,
                 CustomWidgetTemplates.NewsRssStarterId,
-                CustomWidgetTemplates.AgentHudTemplateId
+                CustomWidgetTemplates.AgentHudTemplateId,
+                CustomWidgetTemplates.DayProgressTemplateId,
+                CustomWidgetTemplates.MonthProgressTemplateId,
+                CustomWidgetTemplates.YearProgressTemplateId,
+                CustomWidgetTemplates.StopwatchTemplateId,
+                CustomWidgetTemplates.TimerTemplateId
             ],
             CustomWidgetTemplates.Presets.Select(static p => p.Id).ToArray());
 

@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.timer",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "⏲️",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "script-sandbox",
+    "visual-containers",
+    "micro-charts",
+    "forms-inputs",
+    "widget-settings",
+    "collections-lists",
+    "notifications-reminders",
+    "display-and-audio",
+    "advanced-inputs-and-styling"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 320
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 400
+  },
+  "settings": [
+    {
+      "key": "soundOnDone",
+      "type": "toggle",
+      "label": "${$i18n.setDoneSound}",
+      "default": true
+    }
+  ],
+  "state": {
+    "running": false,
+    "durationMin": 5,
+    "remainingMs": 300000,
+    "endAtMs": 0
+  },
+  "script": {
+    "entry": "logic.js",
+    "tickIntervalMs": 1000
+  },
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$computed.capsuleSummary}",
+    "glyph": "⏲️",
+    "badge": "${$computed.capsuleBadge}",
+    "progress": "${$computed.pct}",
+    "primaryAction": {
+      "icon": "${$computed.running ? 'pause' : 'play'}",
+      "tooltip": "${$i18n.btnStart}",
+      "onClick": {
+        "type": "script.run",
+        "fn": "toggleTimer"
+      }
+    }
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "tm_hero_card",
+        "tm_presets_grid",
+        "tm_controls_grid"
+      ]
+    },
+    "tm_hero_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "12,10",
+      "children": [
+        "tm_zstack"
+      ]
+    },
+    "tm_zstack": {
+      "type": "ZStack",
+      "width": 156,
+      "height": 156,
+      "horizontalAlignment": "center",
+      "children": [
+        "tm_ring",
+        "tm_center_stack"
+      ]
+    },
+    "tm_ring": {
+      "type": "RingGauge",
+      "size": 150,
+      "value": "${$computed.pct}",
+      "max": 100,
+      "unit": "%",
+      "color": "rose"
+    },
+    "tm_center_stack": {
+      "type": "Stack",
+      "spacing": 2,
+      "horizontalAlignment": "center",
+      "verticalAlignment": "center",
+      "children": [
+        "tm_time"
+      ]
+    },
+    "tm_time": {
+      "type": "Text",
+      "dir": "ltr",
+      "text": "${$computed.displayText}",
+      "fontFamily": "mono",
+      "fontSize": 34,
+      "fontWeight": "semiBold",
+      "horizontalAlignment": "center",
+      "maxLines": 1
+    },
+    "tm_presets_grid": {
+      "type": "Grid",
+      "columns": "*,*,*,*,*",
+      "columnSpacing": 6,
+      "children": [
+        "tm_p1",
+        "tm_p5",
+        "tm_p10",
+        "tm_p30",
+        "tm_p60"
+      ]
+    },
+    "tm_p1": {
+      "type": "Button",
+      "column": 0,
+      "text": "1m",
+      "variant": "${$state.durationMin == 1 ? 'standard' : 'subtle'}",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "startTimer",
+        "args": {
+          "mins": "1"
+        }
+      }
+    },
+    "tm_p5": {
+      "type": "Button",
+      "column": 1,
+      "text": "5m",
+      "variant": "${$state.durationMin == 5 ? 'standard' : 'subtle'}",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "startTimer",
+        "args": {
+          "mins": "5"
+        }
+      }
+    },
+    "tm_p10": {
+      "type": "Button",
+      "column": 2,
+      "text": "10m",
+      "variant": "${$state.durationMin == 10 ? 'standard' : 'subtle'}",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "startTimer",
+        "args": {
+          "mins": "10"
+        }
+      }
+    },
+    "tm_p30": {
+      "type": "Button",
+      "column": 3,
+      "text": "30m",
+      "variant": "${$state.durationMin == 30 ? 'standard' : 'subtle'}",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "startTimer",
+        "args": {
+          "mins": "30"
+        }
+      }
+    },
+    "tm_p60": {
+      "type": "Button",
+      "column": 4,
+      "text": "60m",
+      "variant": "${$state.durationMin == 60 ? 'standard' : 'subtle'}",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "startTimer",
+        "args": {
+          "mins": "60"
+        }
+      }
+    },
+    "tm_controls_grid": {
+      "type": "Grid",
+      "columns": "*,*",
+      "columnSpacing": 8,
+      "children": [
+        "tm_btn_toggle",
+        "tm_btn_reset"
+      ]
+    },
+    "tm_btn_toggle": {
+      "type": "Button",
+      "column": 0,
+      "text": "${$computed.primaryLabel}",
+      "variant": "standard",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "toggleTimer"
+      }
+    },
+    "tm_btn_reset": {
+      "type": "Button",
+      "column": 1,
+      "text": "${$i18n.btnReset}",
+      "variant": "subtle",
+      "horizontalAlignment": "stretch",
+      "when": "${$computed.showReset}",
+      "onClick": {
+        "type": "script.run",
+        "fn": "resetTimer"
+      }
+    }
+  }
+}

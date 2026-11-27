@@ -1,0 +1,12 @@
+{
+  "widgetName": "當年進度",
+  "widgetDescription": "今年進行到哪了，目前是年內第幾天以及剩餘天數。",
+  "setStyle": "顯示",
+  "optRing": "圓環",
+  "optBar": "進度條",
+  "subYear": "今年",
+  "lblDay": "第",
+  "lblLeft": "剩餘",
+  "lblDaysLeft": "天剩餘",
+  "tipRefresh": "重新整理"
+}

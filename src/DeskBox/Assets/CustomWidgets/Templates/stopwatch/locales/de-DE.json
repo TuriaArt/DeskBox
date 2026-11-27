@@ -1,0 +1,17 @@
+{
+  "widgetName": "Stoppuhr",
+  "widgetDescription": "Starten, pausieren und Runden direkt in der Leiste; die Karte speichert alle Runden.",
+  "setLapSound": "Ton bei Runde",
+  "setToggleSound": "Ton bei Start/Pause",
+  "lblLap": "Runde",
+  "btnStart": "Start",
+  "btnPause": "Pause",
+  "btnLap": "Runde",
+  "btnReset": "Zurücksetzen",
+  "lapsUnit": "Runden",
+  "running": "läuft",
+  "stopped": "gestoppt",
+  "emptyTitle": "Noch keine Runden",
+  "emptyHint": "Drücke während des Laufens auf „Runde“, um Zwischenzeiten zu speichern",
+  "tipRefresh": "Aktualisieren"
+}

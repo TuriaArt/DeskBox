@@ -1,0 +1,13 @@
+{
+  "widgetName": "오늘 진행률",
+  "widgetDescription": "오늘이 얼마나 지났는지, 경과 시간과 자정까지 남은 시간을 보여줍니다.",
+  "setStyle": "표시 방식",
+  "optRing": "링",
+  "optBar": "막대",
+  "setSeconds": "초 표시",
+  "subDay": "오늘",
+  "lblElapsed": "경과",
+  "lblLeft": "남음",
+  "lblEnds": "종료",
+  "tipRefresh": "새로 고침"
+}

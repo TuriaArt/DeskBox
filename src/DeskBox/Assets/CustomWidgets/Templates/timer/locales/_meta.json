@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "baseLocale": "en-US",
+  "hashes": {
+    "btnPause": "858e4ba7",
+    "btnReset": "daee7606",
+    "btnResume": "d640c742",
+    "btnStart": "e4bb9f1e",
+    "doneToast": "4f49b814",
+    "setDoneSound": "35c9ec3b",
+    "tipRefresh": "0e916101",
+    "widgetDescription": "088b96ec",
+    "widgetName": "cdeec2b3"
+  }
+}

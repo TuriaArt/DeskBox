@@ -1,0 +1,17 @@
+{
+  "widgetName": "Stopwatch",
+  "widgetDescription": "Start, pause and lap from the bar; the card keeps every lap.",
+  "setLapSound": "Sound on lap",
+  "setToggleSound": "Sound on start/pause",
+  "lblLap": "Lap",
+  "btnStart": "Start",
+  "btnPause": "Pause",
+  "btnLap": "Lap",
+  "btnReset": "Reset",
+  "lapsUnit": "laps",
+  "running": "running",
+  "stopped": "stopped",
+  "emptyTitle": "No laps yet",
+  "emptyHint": "Press Lap while running to record splits",
+  "tipRefresh": "Refresh"
+}

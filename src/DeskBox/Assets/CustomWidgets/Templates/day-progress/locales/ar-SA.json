@@ -1,0 +1,13 @@
+{
+  "widgetName": "تقدّم اليوم",
+  "widgetDescription": "كم مضى من اليوم، مع الوقت المنقضي والمتبقي حتى منتصف الليل.",
+  "setStyle": "طريقة العرض",
+  "optRing": "حلقة",
+  "optBar": "شريط",
+  "setSeconds": "إظهار الثواني",
+  "subDay": "من اليوم",
+  "lblElapsed": "المنقضي",
+  "lblLeft": "المتبقي",
+  "lblEnds": "ينتهي عند",
+  "tipRefresh": "تحديث"
+}

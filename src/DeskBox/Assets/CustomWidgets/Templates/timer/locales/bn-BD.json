@@ -1,0 +1,11 @@
+{
+  "widgetName": "টাইমার",
+  "widgetDescription": "এক ক্লিকে কাউন্টডাউন — ১, ৫, ১০, ৩০ বা ৬০ মিনিট বেছে নিন।",
+  "setDoneSound": "শেষ হলে শব্দ",
+  "btnStart": "শুরু",
+  "btnPause": "বিরতি",
+  "btnResume": "আবার শুরু",
+  "btnReset": "রিসেট",
+  "doneToast": "টাইমার শেষ",
+  "tipRefresh": "রিফ্রেশ"
+}

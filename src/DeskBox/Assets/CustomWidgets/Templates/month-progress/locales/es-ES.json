@@ -1,0 +1,12 @@
+{
+  "widgetName": "Progreso del mes",
+  "widgetDescription": "Cuánto del mes actual ha pasado, con los días transcurridos y restantes.",
+  "setStyle": "Visualización",
+  "optRing": "Anillo",
+  "optBar": "Barra",
+  "subMonth": "del mes",
+  "lblDay": "Día",
+  "lblLeft": "Quedan",
+  "lblDaysLeft": "días restantes",
+  "tipRefresh": "Actualizar"
+}

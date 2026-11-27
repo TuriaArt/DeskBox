@@ -1,0 +1,11 @@
+{
+  "widgetName": "倒计时",
+  "widgetDescription": "一键开始倒计时——可选 1、5、10、30 或 60 分钟。",
+  "setDoneSound": "结束时响铃",
+  "btnStart": "开始",
+  "btnPause": "暂停",
+  "btnResume": "继续",
+  "btnReset": "重置",
+  "doneToast": "倒计时结束",
+  "tipRefresh": "刷新"
+}

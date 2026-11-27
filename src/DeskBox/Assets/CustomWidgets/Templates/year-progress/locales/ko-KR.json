@@ -1,0 +1,12 @@
+{
+  "widgetName": "올해 진행률",
+  "widgetDescription": "올해가 얼마나 지났는지, 올해의 몇 번째 날인지와 남은 날을 보여줍니다.",
+  "setStyle": "표시 방식",
+  "optRing": "링",
+  "optBar": "막대",
+  "subYear": "올해",
+  "lblDay": "일차",
+  "lblLeft": "남음",
+  "lblDaysLeft": "일 남음",
+  "tipRefresh": "새로 고침"
+}

@@ -1,0 +1,11 @@
+{
+  "widgetName": "倒數計時",
+  "widgetDescription": "一鍵開始倒數——可選 1、5、10、30 或 60 分鐘。",
+  "setDoneSound": "結束時播放聲音",
+  "btnStart": "開始",
+  "btnPause": "暫停",
+  "btnResume": "繼續",
+  "btnReset": "重設",
+  "doneToast": "倒數計時結束",
+  "tipRefresh": "重新整理"
+}

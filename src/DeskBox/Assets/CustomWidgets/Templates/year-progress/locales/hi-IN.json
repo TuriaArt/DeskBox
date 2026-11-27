@@ -1,0 +1,12 @@
+{
+  "widgetName": "साल की प्रगति",
+  "widgetDescription": "साल कितना बीता, साल का मौजूदा दिन और बचे दिन।",
+  "setStyle": "प्रदर्शन",
+  "optRing": "रिंग",
+  "optBar": "बार",
+  "subYear": "साल का",
+  "lblDay": "दिन",
+  "lblLeft": "शेष",
+  "lblDaysLeft": "दिन शेष",
+  "tipRefresh": "रीफ़्रेश"
+}

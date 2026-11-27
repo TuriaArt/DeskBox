@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "baseLocale": "en-US",
+  "hashes": {
+    "lblDay": "8f2364e1",
+    "lblDaysLeft": "593cbe72",
+    "lblLeft": "58eb9032",
+    "optBar": "95d64cac",
+    "optRing": "b3f952e8",
+    "setStyle": "34e108c0",
+    "subYear": "4584c549",
+    "tipRefresh": "0e916101",
+    "widgetDescription": "b8a98617",
+    "widgetName": "d41f2994"
+  }
+}

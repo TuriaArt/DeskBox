@@ -1,0 +1,12 @@
+{
+  "widgetName": "Jahresfortschritt",
+  "widgetDescription": "Wie weit das Jahr fortgeschritten ist – aktueller Tag des Jahres und verbleibende Tage.",
+  "setStyle": "Darstellung",
+  "optRing": "Ring",
+  "optBar": "Balken",
+  "subYear": "des Jahres",
+  "lblDay": "Tag",
+  "lblLeft": "Übrig",
+  "lblDaysLeft": "Tage übrig",
+  "tipRefresh": "Aktualisieren"
+}

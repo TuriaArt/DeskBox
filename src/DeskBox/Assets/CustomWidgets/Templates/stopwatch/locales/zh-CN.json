@@ -1,0 +1,17 @@
+{
+  "widgetName": "秒表",
+  "widgetDescription": "从任务栏开始、暂停和计圈；卡片保留每一圈记录。",
+  "setLapSound": "计圈提示音",
+  "setToggleSound": "开始/暂停提示音",
+  "lblLap": "圈",
+  "btnStart": "开始",
+  "btnPause": "暂停",
+  "btnLap": "计圈",
+  "btnReset": "重置",
+  "lapsUnit": "圈",
+  "running": "进行中",
+  "stopped": "已停止",
+  "emptyTitle": "还没有计圈",
+  "emptyHint": "运行时按“计圈”记录分段",
+  "tipRefresh": "刷新"
+}
