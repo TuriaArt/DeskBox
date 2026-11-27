@@ -23,6 +23,8 @@ jobs:
           fetch-depth: 0
 
       - name: Commit identity and attribution check
+        # Owner-only gate for the upstream repository; forks run the rest of the pipeline.
+        if: github.repository == 'Tianyu199509/DeskBox'
         shell: pwsh
         env:
           BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
