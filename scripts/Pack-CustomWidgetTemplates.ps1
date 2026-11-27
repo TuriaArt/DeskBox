@@ -15,6 +15,11 @@
 .PARAMETER OutDir
     Output folder (default: artifacts/widgets, which is git-ignored).
 
+.PARAMETER PlainNames
+    Name files just "<id>.dbxwidget". By default names carry the app version and git commit
+    the packages were built from, e.g. "DeskBox-1.6.2-d3f7263_timer.dbxwidget", so packages
+    from different builds never get mixed up.
+
 .EXAMPLE
     pwsh scripts/Pack-CustomWidgetTemplates.ps1
 .EXAMPLE
@@ -28,7 +33,9 @@ param(
         "link-cleaner", "unit-converter"
     ),
 
-    [string]$OutDir = ""
+    [string]$OutDir = "",
+
+    [switch]$PlainNames
 )
 
 $ErrorActionPreference = "Stop"
@@ -44,6 +51,26 @@ if ([string]::IsNullOrWhiteSpace($OutDir)) {
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 $OutDir = (Resolve-Path $OutDir).Path
 
+$prefix = ""
+if (-not $PlainNames) {
+    $appVersion = "dev"
+    $appxManifest = Join-Path $repoRoot "src/DeskBox/Package.appxmanifest"
+    if (Test-Path $appxManifest) {
+        # <Identity ...> spans several lines, so match against the whole file.
+        $match = [regex]::Match((Get-Content -Raw $appxManifest), '<Identity\b[^>]*?\sVersion="(\d+\.\d+\.\d+)')
+        if ($match.Success) { $appVersion = $match.Groups[1].Value }
+    }
+    $commit = "local"
+    try {
+        $sha = (& git -C $repoRoot rev-parse --short=7 HEAD 2>$null)
+        if ($LASTEXITCODE -eq 0 -and $sha) { $commit = $sha.Trim() }
+        & git -C $repoRoot diff --quiet HEAD -- "src/DeskBox/Assets/CustomWidgets/Templates" 2>$null
+        if ($LASTEXITCODE -ne 0) { $commit += "-dirty" }
+    }
+    catch { }
+    $prefix = "DeskBox-$appVersion-${commit}_"
+}
+
 if ($Id.Count -eq 1 -and $Id[0] -eq "*") {
     $Id = Get-ChildItem -Directory $templatesRoot | ForEach-Object Name
 }
@@ -55,7 +82,7 @@ foreach ($templateId in $Id) {
         throw "Template '$templateId' not found (expected $manifest)."
     }
 
-    $target = Join-Path $OutDir "$templateId.dbxwidget"
+    $target = Join-Path $OutDir "$prefix$templateId.dbxwidget"
     if (Test-Path $target) {
         Remove-Item $target -Force
     }
