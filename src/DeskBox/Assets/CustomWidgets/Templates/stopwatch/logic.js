@@ -12,6 +12,11 @@ function fmtStopwatch(ms){
   if (h > 0) return h + ':' + pad2(m) + ':' + pad2(s);
   return pad2(m) + ':' + pad2(s);
 }
+function wantsSound(ctx, key){
+  if (!ctx.settings) return true;
+  var v = key === 'soundOnLap' ? ctx.settings.soundOnLap : ctx.settings.soundOnToggle;
+  return !(v === false || v === 'false');
+}
 export function onInit(ctx){ project(ctx); }
 export function onTick(ctx, nowUnixMs){ project(ctx, nowUnixMs); }
 export function onSettingsChange(ctx){ project(ctx); }
@@ -21,11 +26,11 @@ function _toggleRun(ctx){
   if (s.running){
     s.baseMs = clampNum(s.baseMs, 0) + (now - clampNum(s.since, 0));
     s.running = false; s.since = 0;
-    cue(ctx, 'soft', 45);
+    if (wantsSound(ctx, 'soundOnToggle')) cue(ctx, 'soft', 45);
   } else {
     s.running = true; s.since = now;
     if (!clampNum(s.lapStartMs, 0)) s.lapStartMs = now;
-    cue(ctx, 'soft', 50);
+    if (wantsSound(ctx, 'soundOnToggle')) cue(ctx, 'soft', 50);
   }
   project(ctx);
 }
@@ -38,13 +43,13 @@ export function lap(ctx){
   if (!Array.isArray(s.laps)) s.laps = [];
   s.laps.push(cur);
   s.lapStartMs = now;
-  cue(ctx, 'tick', 40);
+  if (wantsSound(ctx, 'soundOnLap')) cue(ctx, 'tick', 40);
   project(ctx);
 }
 export function reset(ctx){
   var s = ctx.state || (ctx.state = {});
   s.running = false; s.baseMs = 0; s.since = 0; s.lapStartMs = 0; s.laps = [];
-  cue(ctx, 'pop', 45);
+  if (wantsSound(ctx, 'soundOnToggle')) cue(ctx, 'pop', 45);
   project(ctx);
 }
 export function refresh(ctx){ project(ctx); }

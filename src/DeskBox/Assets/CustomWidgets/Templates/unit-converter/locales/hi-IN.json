@@ -1,0 +1,15 @@
+{
+  "widgetName": "इकाई परिवर्तक",
+  "widgetDescription": "लंबाई, वज़न, तापमान, आयतन, गति और डेटा आकार — टाइप करते ही बदलता है।",
+  "setPrecision": "दशमलव स्थान",
+  "catLength": "लंबाई",
+  "catMass": "वज़न",
+  "catTemp": "तापमान",
+  "catVolume": "आयतन",
+  "catSpeed": "गति",
+  "catData": "डेटा",
+  "phValue": "मान",
+  "btnSwap": "अदला-बदली",
+  "btnCopy": "परिणाम कॉपी करें",
+  "toastCopied": "परिणाम कॉपी हुआ"
+}

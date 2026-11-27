@@ -1,0 +1,15 @@
+{
+  "widgetName": "Convertisseur d’unités",
+  "widgetDescription": "Longueur, poids, température, volume, vitesse et taille de données, converti pendant la saisie.",
+  "setPrecision": "Décimales",
+  "catLength": "Longueur",
+  "catMass": "Poids",
+  "catTemp": "Température",
+  "catVolume": "Volume",
+  "catSpeed": "Vitesse",
+  "catData": "Données",
+  "phValue": "Valeur",
+  "btnSwap": "Inverser",
+  "btnCopy": "Copier le résultat",
+  "toastCopied": "Résultat copié"
+}

@@ -1,0 +1,14 @@
+{
+  "widgetName": "Configurações rápidas",
+  "widgetDescription": "Botões rápidos do Windows na sua área de trabalho: Wi-Fi, Bluetooth, modo escuro, manter ativo, mudo e bloqueio.",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "Modo escuro",
+  "tileAwake": "Manter ativo",
+  "tileMute": "Mudo",
+  "tileLock": "Bloquear",
+  "lockHint": "Bloquear este PC",
+  "btnSound": "Som",
+  "btnDisplay": "Tela",
+  "btnNetwork": "Rede"
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "baseLocale": "en-US",
+  "hashes": {
+    "btnNightLight": "78c28ebe",
+    "btnOutput": "b2439bcb",
+    "lblBrightness": "ec811d30",
+    "lblVolume": "b10fb966",
+    "tipMute": "fae01519",
+    "widgetDescription": "e57e8c45",
+    "widgetName": "7ca82fbc"
+  }
+}

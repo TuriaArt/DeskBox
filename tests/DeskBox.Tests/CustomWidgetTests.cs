@@ -28,9 +28,15 @@ public sealed class CustomWidgetTests
     [InlineData(CustomWidgetTemplates.YearProgressTemplateId)]
     [InlineData(CustomWidgetTemplates.StopwatchTemplateId)]
     [InlineData(CustomWidgetTemplates.TimerTemplateId)]
+    [InlineData(CustomWidgetTemplates.QuickSettingsTemplateId)]
+    [InlineData(CustomWidgetTemplates.SoundDisplayTemplateId)]
+    [InlineData(CustomWidgetTemplates.CurrencyConverterTemplateId)]
+    [InlineData(CustomWidgetTemplates.CryptoWatchlistTemplateId)]
+    [InlineData(CustomWidgetTemplates.LinkCleanerTemplateId)]
+    [InlineData(CustomWidgetTemplates.UnitConverterTemplateId)]
     public void BuiltInPresetTemplates_ParseWithoutErrors(string templateId)
     {
-        Assert.Equal(19, CustomWidgetTemplates.BuiltInTemplateIds.Count);
+        Assert.Equal(25, CustomWidgetTemplates.BuiltInTemplateIds.Count);
         CustomWidgetTemplateBundle bundle = CustomWidgetTemplates.GetTemplateBundle(templateId);
         Assert.DoesNotContain("\"i18n\"", bundle.ManifestJson, StringComparison.Ordinal);
         Assert.Equal(13, bundle.Locales.Locales.Count);
@@ -419,9 +425,9 @@ public sealed class CustomWidgetTests
         Assert.True(CustomWidgetTemplates.IsEmojiIcon("🗂️"));
         Assert.True(CustomWidgetTemplates.IsEmojiIcon("⏱️"));
 
-        // All 19 built-in presets carry distinct Emoji icons plus distinct Segoe Fluent PUA monochrome fallbacks
+        // All 25 built-in presets carry distinct Emoji icons plus distinct Segoe Fluent PUA monochrome fallbacks
         string[] presetIcons = CustomWidgetTemplates.Presets.Select(p => p.IconGlyph).ToArray();
-        Assert.Equal(19, presetIcons.Length);
+        Assert.Equal(25, presetIcons.Length);
         Assert.Equal(presetIcons.Length, presetIcons.Distinct(StringComparer.Ordinal).Count());
         Assert.All(presetIcons, icon =>
         {
@@ -984,7 +990,13 @@ public sealed class CustomWidgetTests
                 CustomWidgetTemplates.MonthProgressTemplateId,
                 CustomWidgetTemplates.YearProgressTemplateId,
                 CustomWidgetTemplates.StopwatchTemplateId,
-                CustomWidgetTemplates.TimerTemplateId
+                CustomWidgetTemplates.TimerTemplateId,
+                CustomWidgetTemplates.QuickSettingsTemplateId,
+                CustomWidgetTemplates.SoundDisplayTemplateId,
+                CustomWidgetTemplates.CurrencyConverterTemplateId,
+                CustomWidgetTemplates.CryptoWatchlistTemplateId,
+                CustomWidgetTemplates.LinkCleanerTemplateId,
+                CustomWidgetTemplates.UnitConverterTemplateId
             ],
             CustomWidgetTemplates.Presets.Select(static p => p.Id).ToArray());
 

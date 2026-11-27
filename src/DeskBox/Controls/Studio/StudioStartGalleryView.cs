@@ -236,7 +236,13 @@ internal sealed class StudioStartGalleryView : IDisposable
             (CustomWidgetTemplates.MonthProgressTemplateId, "🌗", "CustomWidget.Template.MonthProgress.Name", "CustomWidget.Template.MonthProgress.Description", string.Empty, TemplateGalleryCategory.Tools),
             (CustomWidgetTemplates.YearProgressTemplateId, "🗓️", "CustomWidget.Template.YearProgress.Name", "CustomWidget.Template.YearProgress.Description", string.Empty, TemplateGalleryCategory.Tools),
             (CustomWidgetTemplates.StopwatchTemplateId, "⏱️", "CustomWidget.Template.Stopwatch.Name", "CustomWidget.Template.Stopwatch.Description", string.Empty, TemplateGalleryCategory.Tools),
-            (CustomWidgetTemplates.TimerTemplateId, "⏲️", "CustomWidget.Template.Timer.Name", "CustomWidget.Template.Timer.Description", string.Empty, TemplateGalleryCategory.Tools)
+            (CustomWidgetTemplates.TimerTemplateId, "⏲️", "CustomWidget.Template.Timer.Name", "CustomWidget.Template.Timer.Description", string.Empty, TemplateGalleryCategory.Tools),
+            (CustomWidgetTemplates.QuickSettingsTemplateId, "🎛️", "CustomWidget.Template.QuickSettings.Name", "CustomWidget.Template.QuickSettings.Description", string.Empty, TemplateGalleryCategory.Tools),
+            (CustomWidgetTemplates.SoundDisplayTemplateId, "🔊", "CustomWidget.Template.SoundDisplay.Name", "CustomWidget.Template.SoundDisplay.Description", string.Empty, TemplateGalleryCategory.Tools),
+            (CustomWidgetTemplates.CurrencyConverterTemplateId, "💱", "CustomWidget.Template.CurrencyConverter.Name", "CustomWidget.Template.CurrencyConverter.Description", string.Empty, TemplateGalleryCategory.Live),
+            (CustomWidgetTemplates.CryptoWatchlistTemplateId, "🪙", "CustomWidget.Template.CryptoWatchlist.Name", "CustomWidget.Template.CryptoWatchlist.Description", string.Empty, TemplateGalleryCategory.Live),
+            (CustomWidgetTemplates.LinkCleanerTemplateId, "🧹", "CustomWidget.Template.LinkCleaner.Name", "CustomWidget.Template.LinkCleaner.Description", string.Empty, TemplateGalleryCategory.Tools),
+            (CustomWidgetTemplates.UnitConverterTemplateId, "📐", "CustomWidget.Template.UnitConverter.Name", "CustomWidget.Template.UnitConverter.Description", string.Empty, TemplateGalleryCategory.Tools)
         ];
 
         var specs = new List<WorkshopCardSpec>(mergedOfficial.Count);

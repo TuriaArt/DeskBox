@@ -1,0 +1,14 @@
+{
+  "widgetName": "Быстрые настройки",
+  "widgetDescription": "Быстрые переключатели Windows на рабочем столе: Wi-Fi, Bluetooth, тёмная тема, режим без сна, звук и блокировка.",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "Тёмная тема",
+  "tileAwake": "Не засыпать",
+  "tileMute": "Без звука",
+  "tileLock": "Блокировка",
+  "lockHint": "Заблокировать ПК",
+  "btnSound": "Звук",
+  "btnDisplay": "Экран",
+  "btnNetwork": "Сеть"
+}

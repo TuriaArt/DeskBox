@@ -94,6 +94,7 @@
       "verticalAlignment": "center",
       "children": [
         "dp_gauge",
+        "dp_bar",
         "dp_info",
         "dp_emoji"
       ]
@@ -128,6 +129,7 @@
     "dp_bar": {
       "type": "ProgressBar",
       "column": 0,
+      "width": 92,
       "value": "${$computed.pct}",
       "max": 100,
       "color": "amber",

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "baseLocale": "en-US",
+  "hashes": {
+    "emptyHint": "5c11c737",
+    "emptyTitle": "61cca565",
+    "lblUpdated": "3a5ecca1",
+    "phAmount": "49e96d7c",
+    "setHome": "0c61782a",
+    "statusError": "8eba0f3b",
+    "statusLoading": "f39854ce",
+    "tipRefresh": "98b5adbc",
+    "tipSwap": "09747beb",
+    "widgetDescription": "c036a3c8",
+    "widgetName": "424dc8eb"
+  }
+}

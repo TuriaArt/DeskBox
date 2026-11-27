@@ -1,0 +1,14 @@
+{
+  "widgetName": "クイック設定",
+  "widgetDescription": "デスクトップで使える Windows のクイック切り替え：Wi-Fi、Bluetooth、ダークモード、スリープ防止、ミュート、ロック。",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "ダークモード",
+  "tileAwake": "スリープ防止",
+  "tileMute": "ミュート",
+  "tileLock": "ロック",
+  "lockHint": "この PC をロック",
+  "btnSound": "サウンド",
+  "btnDisplay": "ディスプレイ",
+  "btnNetwork": "ネットワーク"
+}

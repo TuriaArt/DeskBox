@@ -1,4 +1,4 @@
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 using System.Collections.Frozen;
 using System.Globalization;
 using System.Text;
@@ -61,6 +61,12 @@ public static class CustomWidgetTemplates
     public const string YearProgressTemplateId = "year-progress";
     public const string StopwatchTemplateId = "stopwatch";
     public const string TimerTemplateId = "timer";
+    public const string QuickSettingsTemplateId = "quick-settings";
+    public const string SoundDisplayTemplateId = "sound-display";
+    public const string CurrencyConverterTemplateId = "currency-converter";
+    public const string CryptoWatchlistTemplateId = "crypto-watchlist";
+    public const string LinkCleanerTemplateId = "link-cleaner";
+    public const string UnitConverterTemplateId = "unit-converter";
 
     private static readonly BuiltInTemplateMetadata[] BuiltInTemplateCatalog =
     [
@@ -82,7 +88,13 @@ public static class CustomWidgetTemplates
         new(MonthProgressTemplateId, "CustomWidget.Template.MonthProgress.Name", "CustomWidget.Template.MonthProgress.Description", "🌗", "#3B82F6", "", "\uE8BF"),
         new(YearProgressTemplateId, "CustomWidget.Template.YearProgress.Name", "CustomWidget.Template.YearProgress.Description", "🗓️", "#8B5CF6", "", "\uE8C0"),
         new(StopwatchTemplateId, "CustomWidget.Template.Stopwatch.Name", "CustomWidget.Template.Stopwatch.Description", "⏱️", "#10B981", "", "\uE823"),
-        new(TimerTemplateId, "CustomWidget.Template.Timer.Name", "CustomWidget.Template.Timer.Description", "⏲️", "#F43F5E", "", "\uE81C")
+        new(TimerTemplateId, "CustomWidget.Template.Timer.Name", "CustomWidget.Template.Timer.Description", "⏲️", "#F43F5E", "", "\uE81C"),
+        new(QuickSettingsTemplateId, "CustomWidget.Template.QuickSettings.Name", "CustomWidget.Template.QuickSettings.Description", "🎛️", "#0EA5E9", "", "\uE713"),
+        new(SoundDisplayTemplateId, "CustomWidget.Template.SoundDisplay.Name", "CustomWidget.Template.SoundDisplay.Description", "🔊", "#6366F1", "", "\uE767"),
+        new(CurrencyConverterTemplateId, "CustomWidget.Template.CurrencyConverter.Name", "CustomWidget.Template.CurrencyConverter.Description", "💱", "#16A34A", "", "\uE8C7"),
+        new(CryptoWatchlistTemplateId, "CustomWidget.Template.CryptoWatchlist.Name", "CustomWidget.Template.CryptoWatchlist.Description", "🪙", "#F59E0B", "", "\uEAFC"),
+        new(LinkCleanerTemplateId, "CustomWidget.Template.LinkCleaner.Name", "CustomWidget.Template.LinkCleaner.Description", "🧹", "#14B8A6", "", "\uE71B"),
+        new(UnitConverterTemplateId, "CustomWidget.Template.UnitConverter.Name", "CustomWidget.Template.UnitConverter.Description", "📐", "#EC4899", "", "\uE8EF")
     ];
 
     private static readonly FrozenDictionary<string, BuiltInTemplateMetadata> BuiltInTemplateById =

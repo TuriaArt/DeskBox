@@ -15,7 +15,7 @@ public sealed class CustomWidgetAgentStudioTests
     [Fact]
     public void StudioStarters_And_ManifestJsonSchema_AreAllValidWithoutDiagnostics()
     {
-        Assert.Equal(19, CustomWidgetTemplates.Presets.Count);
+        Assert.Equal(25, CustomWidgetTemplates.Presets.Count);
         Assert.Contains(CustomWidgetTemplates.Presets, p => p.Id == CustomWidgetTemplates.AiInboxStarterId);
         Assert.Contains(CustomWidgetTemplates.Presets, p => p.Id == CustomWidgetTemplates.HydrationStarterId);
         Assert.Contains(CustomWidgetTemplates.Presets, p => p.Id == CustomWidgetTemplates.NewsRssStarterId);
@@ -1474,7 +1474,7 @@ public sealed class CustomWidgetAgentStudioTests
     [Fact]
     public void AllThirteenOfficialTemplatesAndStarters_ParseCleanly_And_RenderLocalizedCopyInChineseAndEnglish()
     {
-        Assert.Equal(19, CustomWidgetTemplates.BuiltInTemplateIds.Count);
+        Assert.Equal(25, CustomWidgetTemplates.BuiltInTemplateIds.Count);
 
         foreach (string templateId in CustomWidgetTemplates.BuiltInTemplateIds)
         {

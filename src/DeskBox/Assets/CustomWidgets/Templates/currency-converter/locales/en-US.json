@@ -1,0 +1,13 @@
+{
+  "widgetName": "Currency Converter",
+  "widgetDescription": "Convert between 17 currencies with live exchange rates — no API key needed.",
+  "setHome": "Home currency",
+  "phAmount": "Amount",
+  "tipSwap": "Swap currencies",
+  "tipRefresh": "Refresh rates",
+  "statusLoading": "Loading rates…",
+  "statusError": "Could not load rates",
+  "lblUpdated": "Updated",
+  "emptyTitle": "No rates yet",
+  "emptyHint": "Rates refresh automatically every 30 minutes"
+}

@@ -1,0 +1,9 @@
+{
+  "widgetName": "Sound & Anzeige",
+  "widgetDescription": "Gesamtlautstärke, Stummschaltung, Audioausgabe und Bildschirmhelligkeit in einer Karte.",
+  "lblVolume": "Lautstärke",
+  "lblBrightness": "Helligkeit",
+  "btnOutput": "Ausgabe",
+  "btnNightLight": "Nachtmodus",
+  "tipMute": "Stumm ein/aus"
+}

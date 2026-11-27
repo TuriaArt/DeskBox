@@ -1,0 +1,13 @@
+{
+  "widgetName": "Conversor de moedas",
+  "widgetDescription": "Converta entre 17 moedas com cotações ao vivo, sem chave de API.",
+  "setHome": "Moeda principal",
+  "phAmount": "Valor",
+  "tipSwap": "Inverter moedas",
+  "tipRefresh": "Atualizar cotações",
+  "statusLoading": "Carregando cotações…",
+  "statusError": "Não foi possível carregar as cotações",
+  "lblUpdated": "Atualizado",
+  "emptyTitle": "Ainda sem cotações",
+  "emptyHint": "As cotações são atualizadas automaticamente a cada 30 minutos"
+}

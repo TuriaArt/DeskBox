@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.sound-display",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "🔊",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "device-state",
+    "system-control",
+    "forms-inputs",
+    "visual-containers"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 260
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 300
+  },
+  "sources": [
+    {
+      "id": "device",
+      "type": "deviceState",
+      "intervalMs": 3000
+    }
+  ],
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$device.volumeText}",
+    "glyph": "🔊",
+    "badge": "${$device.brightnessText}",
+    "primaryAction": {
+      "icon": "${$device.muted == 'true' ? 'mute' : 'volume'}",
+      "tooltip": "${$i18n.tipMute}",
+      "onClick": {
+        "type": "system.control",
+        "targetId": "volume.muteToggle"
+      }
+    }
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "sd_volume_card",
+        "sd_bright_card"
+      ]
+    },
+    "sd_volume_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "12,10",
+      "spacing": 8,
+      "children": [
+        "sd_volume_slider",
+        "sd_volume_row"
+      ]
+    },
+    "sd_volume_slider": {
+      "type": "Slider",
+      "title": "${$i18n.lblVolume}",
+      "value": "${$device.volume}",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "onChange": {
+        "type": "system.control",
+        "targetId": "volume.set",
+        "value": "${$value}"
+      }
+    },
+    "sd_volume_row": {
+      "type": "Grid",
+      "columns": "Auto,*,Auto",
+      "columnSpacing": 8,
+      "verticalAlignment": "center",
+      "children": [
+        "sd_mute_btn",
+        "sd_device_name",
+        "sd_output_btn"
+      ]
+    },
+    "sd_mute_btn": {
+      "type": "IconButton",
+      "column": 0,
+      "icon": "${$device.muted == 'true' ? 'mute' : 'volume'}",
+      "size": 32,
+      "variant": "subtle",
+      "tooltip": "${$i18n.tipMute}",
+      "onClick": {
+        "type": "system.control",
+        "targetId": "volume.muteToggle"
+      }
+    },
+    "sd_device_name": {
+      "type": "Text",
+      "column": 1,
+      "text": "${$device.audioDeviceName}",
+      "style": "caption",
+      "color": "secondary",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "sd_output_btn": {
+      "type": "Button",
+      "column": 2,
+      "text": "${$i18n.btnOutput}",
+      "variant": "subtle",
+      "onClick": {
+        "type": "system.control",
+        "targetId": "audio.output"
+      }
+    },
+    "sd_bright_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "12,10",
+      "spacing": 8,
+      "children": [
+        "sd_bright_slider",
+        "sd_bright_row"
+      ]
+    },
+    "sd_bright_slider": {
+      "type": "Slider",
+      "title": "${$i18n.lblBrightness}",
+      "value": "${$device.brightness}",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "onChange": {
+        "type": "system.control",
+        "targetId": "brightness.set",
+        "value": "${$value}"
+      }
+    },
+    "sd_bright_row": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "verticalAlignment": "center",
+      "children": [
+        "sd_bright_status",
+        "sd_night_btn"
+      ]
+    },
+    "sd_bright_status": {
+      "type": "Text",
+      "column": 0,
+      "text": "${$device.brightnessText}",
+      "style": "caption",
+      "color": "secondary",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "sd_night_btn": {
+      "type": "Button",
+      "column": 1,
+      "text": "${$i18n.btnNightLight}",
+      "variant": "subtle",
+      "onClick": {
+        "type": "system.openSetting",
+        "targetId": "nightlight"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "widgetName": "Link-Reiniger",
+  "widgetDescription": "Entfernt Tracking-Parameter (utm, fbclid, gclid und mehr) aus kopierten Links, damit du sie sauber einfügen kannst.",
+  "setReferral": "Auch Empfehlungs-Tags entfernen (ref, share, si)",
+  "lblClipboard": "Aus der Zwischenablage",
+  "lblClean": "Sauberer Link",
+  "lblRemoved": "Entfernt",
+  "btnCopy": "Sauberen Link kopieren",
+  "btnOpen": "Öffnen",
+  "emptyTitle": "Kein Link in der Zwischenablage",
+  "emptyHint": "Kopiere einen beliebigen Link – hier erscheint die saubere Version.",
+  "statusClean": "Bereits sauber",
+  "statusCopied": "Sauberer Link kopiert",
+  "lblCleaned": "Bereinigte Links"
+}

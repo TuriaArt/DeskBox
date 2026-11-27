@@ -1,0 +1,14 @@
+{
+  "widgetName": "Réglages rapides",
+  "widgetDescription": "Les interrupteurs rapides de Windows sur votre bureau : Wi-Fi, Bluetooth, mode sombre, rester éveillé, muet et verrouillage.",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "Mode sombre",
+  "tileAwake": "Rester éveillé",
+  "tileMute": "Muet",
+  "tileLock": "Verrouiller",
+  "lockHint": "Verrouiller ce PC",
+  "btnSound": "Son",
+  "btnDisplay": "Affichage",
+  "btnNetwork": "Réseau"
+}

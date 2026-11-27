@@ -1,0 +1,14 @@
+{
+  "widgetName": "Quick Settings",
+  "widgetDescription": "Windows quick toggles on your desktop: Wi-Fi, Bluetooth, dark mode, keep awake, mute and lock.",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "Dark mode",
+  "tileAwake": "Keep awake",
+  "tileMute": "Mute",
+  "tileLock": "Lock",
+  "lockHint": "Lock this PC",
+  "btnSound": "Sound",
+  "btnDisplay": "Display",
+  "btnNetwork": "Network"
+}

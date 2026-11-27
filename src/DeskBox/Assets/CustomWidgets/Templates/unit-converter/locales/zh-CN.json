@@ -1,0 +1,15 @@
+{
+  "widgetName": "单位换算",
+  "widgetDescription": "长度、重量、温度、体积、速度和数据大小，输入即换算。",
+  "setPrecision": "小数位数",
+  "catLength": "长度",
+  "catMass": "重量",
+  "catTemp": "温度",
+  "catVolume": "体积",
+  "catSpeed": "速度",
+  "catData": "数据",
+  "phValue": "数值",
+  "btnSwap": "交换",
+  "btnCopy": "复制结果",
+  "toastCopied": "结果已复制"
+}

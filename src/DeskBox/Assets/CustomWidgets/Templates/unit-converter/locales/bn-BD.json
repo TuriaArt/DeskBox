@@ -1,0 +1,15 @@
+{
+  "widgetName": "একক রূপান্তরক",
+  "widgetDescription": "দৈর্ঘ্য, ওজন, তাপমাত্রা, আয়তন, গতি ও ডেটার আকার — টাইপ করার সঙ্গে সঙ্গে রূপান্তর।",
+  "setPrecision": "দশমিকের পরের ঘর",
+  "catLength": "দৈর্ঘ্য",
+  "catMass": "ওজন",
+  "catTemp": "তাপমাত্রা",
+  "catVolume": "আয়তন",
+  "catSpeed": "গতি",
+  "catData": "ডেটা",
+  "phValue": "মান",
+  "btnSwap": "অদলবদল",
+  "btnCopy": "ফল কপি করুন",
+  "toastCopied": "ফল কপি হয়েছে"
+}

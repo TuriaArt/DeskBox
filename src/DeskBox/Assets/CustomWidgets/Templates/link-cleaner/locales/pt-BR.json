@@ -1,0 +1,15 @@
+{
+  "widgetName": "Limpador de links",
+  "widgetDescription": "Remove parâmetros de rastreamento (utm, fbclid, gclid e outros) dos links que você copia para colá-los limpos.",
+  "setReferral": "Remover também tags de indicação (ref, share, si)",
+  "lblClipboard": "Da área de transferência",
+  "lblClean": "Link limpo",
+  "lblRemoved": "Removidos",
+  "btnCopy": "Copiar link limpo",
+  "btnOpen": "Abrir",
+  "emptyTitle": "Nenhum link na área de transferência",
+  "emptyHint": "Copie qualquer link e a versão limpa aparecerá aqui.",
+  "statusClean": "Já está limpo",
+  "statusCopied": "Link limpo copiado",
+  "lblCleaned": "Links limpos"
+}

@@ -1,0 +1,9 @@
+{
+  "widgetName": "Son et affichage",
+  "widgetDescription": "Volume principal, muet, sortie audio et luminosité de l’écran dans une seule carte.",
+  "lblVolume": "Volume",
+  "lblBrightness": "Luminosité",
+  "btnOutput": "Sortie",
+  "btnNightLight": "Éclairage nocturne",
+  "tipMute": "Activer / couper le son"
+}

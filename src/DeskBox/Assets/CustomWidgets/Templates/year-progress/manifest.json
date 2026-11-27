@@ -88,6 +88,7 @@
       "verticalAlignment": "center",
       "children": [
         "yp_gauge",
+        "yp_bar",
         "yp_info",
         "yp_emoji"
       ]
@@ -122,6 +123,7 @@
     "yp_bar": {
       "type": "ProgressBar",
       "column": 0,
+      "width": 92,
       "value": "${$computed.pct}",
       "max": 100,
       "color": "violet",

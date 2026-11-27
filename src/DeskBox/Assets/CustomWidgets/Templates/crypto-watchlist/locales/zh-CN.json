@@ -1,0 +1,12 @@
+{
+  "widgetName": "加密货币行情",
+  "widgetDescription": "来自 CoinGecko 的实时价格与 24 小时涨跌，无需 API 密钥。",
+  "setCoins": "币种",
+  "setVs": "计价货币",
+  "tipRefresh": "刷新价格",
+  "statusLoading": "正在加载价格…",
+  "statusError": "价格加载失败",
+  "lblUpdated": "更新于",
+  "emptyTitle": "暂无价格",
+  "emptyHint": "价格每 5 分钟自动刷新"
+}

@@ -1,0 +1,9 @@
+{
+  "widgetName": "Sound & Display",
+  "widgetDescription": "Master volume, mute, audio output and screen brightness in one card.",
+  "lblVolume": "Volume",
+  "lblBrightness": "Brightness",
+  "btnOutput": "Output",
+  "btnNightLight": "Night light",
+  "tipMute": "Mute / unmute"
+}

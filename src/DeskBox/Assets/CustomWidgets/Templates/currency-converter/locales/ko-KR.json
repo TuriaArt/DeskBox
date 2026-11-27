@@ -1,0 +1,13 @@
+{
+  "widgetName": "환율 계산기",
+  "widgetDescription": "실시간 환율로 17개 통화를 변환합니다. API 키가 필요 없습니다.",
+  "setHome": "기준 통화",
+  "phAmount": "금액",
+  "tipSwap": "통화 바꾸기",
+  "tipRefresh": "환율 새로 고침",
+  "statusLoading": "환율을 불러오는 중…",
+  "statusError": "환율을 불러오지 못했습니다",
+  "lblUpdated": "업데이트",
+  "emptyTitle": "아직 환율이 없습니다",
+  "emptyHint": "환율은 30분마다 자동으로 새로 고쳐집니다"
+}

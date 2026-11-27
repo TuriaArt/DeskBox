@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.crypto-watchlist",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "🪙",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "http-and-rss-feeds",
+    "script-sandbox",
+    "collections-lists",
+    "visual-containers",
+    "widget-settings"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 260
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 320
+  },
+  "settings": [
+    {
+      "key": "coins",
+      "type": "choice",
+      "label": "${$i18n.setCoins}",
+      "default": "bitcoin,ethereum,solana,the-open-network",
+      "options": [
+        {
+          "value": "bitcoin,ethereum,solana,the-open-network",
+          "label": "BTC · ETH · SOL · TON"
+        },
+        {
+          "value": "bitcoin,ethereum,binancecoin,ripple",
+          "label": "BTC · ETH · BNB · XRP"
+        },
+        {
+          "value": "bitcoin,ethereum,dogecoin,cardano",
+          "label": "BTC · ETH · DOGE · ADA"
+        },
+        {
+          "value": "bitcoin,ethereum,tether,tron",
+          "label": "BTC · ETH · USDT · TRX"
+        }
+      ]
+    },
+    {
+      "key": "vsCurrency",
+      "type": "choice",
+      "label": "${$i18n.setVs}",
+      "default": "usd",
+      "options": [
+        {
+          "value": "usd",
+          "label": "USD"
+        },
+        {
+          "value": "eur",
+          "label": "EUR"
+        },
+        {
+          "value": "gbp",
+          "label": "GBP"
+        },
+        {
+          "value": "rub",
+          "label": "RUB"
+        },
+        {
+          "value": "cny",
+          "label": "CNY"
+        },
+        {
+          "value": "jpy",
+          "label": "JPY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "prices",
+      "type": "httpJson",
+      "url": "https://api.coingecko.com/api/v3/simple/price?ids=${$settings.coins}&vs_currencies=${$settings.vsCurrency}&include_24hr_change=true",
+      "intervalMs": 300000
+    }
+  ],
+  "state": {
+    "quotes": {},
+    "quotesVs": "",
+    "quotesAtMs": 0
+  },
+  "script": {
+    "entry": "logic.js",
+    "tickIntervalMs": 0
+  },
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$computed.capsuleSummary}",
+    "glyph": "🪙",
+    "badge": "${$computed.capsuleBadge}"
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "cr_list",
+        "cr_footer"
+      ]
+    },
+    "cr_list": {
+      "type": "List",
+      "items": "${$computed.coins}",
+      "itemTemplate": "cr_row",
+      "variant": "divided",
+      "emptyState": {
+        "icon": "🪙",
+        "title": "${$i18n.emptyTitle}",
+        "subtitle": "${$i18n.emptyHint}"
+      }
+    },
+    "cr_row": {
+      "type": "Grid",
+      "columns": "Auto,*,Auto",
+      "columnSpacing": 10,
+      "verticalAlignment": "center",
+      "children": [
+        "cr_symbol_stack",
+        "cr_price",
+        "cr_change"
+      ]
+    },
+    "cr_symbol_stack": {
+      "type": "Stack",
+      "column": 0,
+      "spacing": 1,
+      "verticalAlignment": "center",
+      "children": [
+        "cr_symbol",
+        "cr_name"
+      ]
+    },
+    "cr_symbol": {
+      "type": "Text",
+      "dir": "ltr",
+      "text": "${$item.sym}",
+      "style": "body",
+      "fontWeight": "semiBold",
+      "maxLines": 1
+    },
+    "cr_name": {
+      "type": "Text",
+      "dir": "ltr",
+      "text": "${$item.name}",
+      "style": "caption",
+      "color": "muted",
+      "maxLines": 1
+    },
+    "cr_price": {
+      "type": "Text",
+      "column": 1,
+      "dir": "ltr",
+      "text": "${$item.price}",
+      "style": "body",
+      "fontWeight": "semiBold",
+      "horizontalAlignment": "right",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "cr_change": {
+      "type": "Badge",
+      "column": 2,
+      "text": "${$item.change}",
+      "tone": "${$item.tone}",
+      "verticalAlignment": "center"
+    },
+    "cr_footer": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "verticalAlignment": "center",
+      "children": [
+        "cr_status",
+        "cr_refresh_btn"
+      ]
+    },
+    "cr_status": {
+      "type": "Text",
+      "column": 0,
+      "text": "${$computed.statusText}",
+      "style": "caption",
+      "color": "muted",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "cr_refresh_btn": {
+      "type": "IconButton",
+      "column": 1,
+      "icon": "refresh",
+      "size": 28,
+      "variant": "subtle",
+      "tooltip": "${$i18n.tipRefresh}",
+      "onClick": {
+        "type": "source.refresh",
+        "targetId": "prices"
+      }
+    }
+  }
+}

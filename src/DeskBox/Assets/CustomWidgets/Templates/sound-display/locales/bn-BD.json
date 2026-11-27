@@ -1,0 +1,9 @@
+{
+  "widgetName": "সাউন্ড ও ডিসপ্লে",
+  "widgetDescription": "মূল ভলিউম, মিউট, অডিও আউটপুট ও স্ক্রিনের উজ্জ্বলতা এক কার্ডে।",
+  "lblVolume": "ভলিউম",
+  "lblBrightness": "উজ্জ্বলতা",
+  "btnOutput": "আউটপুট",
+  "btnNightLight": "নাইট লাইট",
+  "tipMute": "মিউট / আনমিউট"
+}

@@ -55,7 +55,8 @@ export function onTick(ctx, nowUnixMs){
     var remaining = Math.max(0, clampNum(s.endAtMs, 0) - now);
     if (remaining <= 0){
       s.running = false; s.remainingMs = 0; s.endAtMs = 0;
-      cue(ctx, 'bell', 65);
+      var doneSound = ctx.settings ? ctx.settings.soundOnDone : true;
+      if (!(doneSound === false || doneSound === 'false')) cue(ctx, 'bell', 65);
       toastMsg(ctx, ctx.t('doneToast', 'Timer finished'));
     } else {
       s.remainingMs = remaining;

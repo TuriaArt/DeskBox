@@ -1,0 +1,13 @@
+{
+  "widgetName": "通貨換算",
+  "widgetDescription": "リアルタイムの為替レートで 17 通貨を換算。API キーは不要です。",
+  "setHome": "基準通貨",
+  "phAmount": "金額",
+  "tipSwap": "通貨を入れ替え",
+  "tipRefresh": "レートを更新",
+  "statusLoading": "レートを読み込み中…",
+  "statusError": "レートを読み込めませんでした",
+  "lblUpdated": "更新",
+  "emptyTitle": "レートはまだありません",
+  "emptyHint": "レートは 30 分ごとに自動更新されます"
+}

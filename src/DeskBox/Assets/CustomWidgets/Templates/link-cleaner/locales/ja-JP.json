@@ -1,0 +1,15 @@
+{
+  "widgetName": "リンククリーナー",
+  "widgetDescription": "コピーしたリンクから追跡パラメーター（utm、fbclid、gclid など）を取り除き、きれいな状態で貼り付けられます。",
+  "setReferral": "紹介タグ（ref、share、si）も削除する",
+  "lblClipboard": "クリップボードから",
+  "lblClean": "きれいなリンク",
+  "lblRemoved": "削除済み",
+  "btnCopy": "きれいなリンクをコピー",
+  "btnOpen": "開く",
+  "emptyTitle": "クリップボードにリンクがありません",
+  "emptyHint": "リンクをコピーすると、ここにきれいなリンクが表示されます。",
+  "statusClean": "すでにきれいです",
+  "statusCopied": "きれいなリンクをコピーしました",
+  "lblCleaned": "処理したリンク"
+}

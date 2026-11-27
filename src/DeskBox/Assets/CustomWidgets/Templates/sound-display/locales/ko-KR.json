@@ -1,0 +1,9 @@
+{
+  "widgetName": "소리 및 디스플레이",
+  "widgetDescription": "마스터 볼륨, 음소거, 오디오 출력, 화면 밝기를 한 카드에서.",
+  "lblVolume": "볼륨",
+  "lblBrightness": "밝기",
+  "btnOutput": "출력",
+  "btnNightLight": "야간 모드",
+  "tipMute": "음소거 / 해제"
+}

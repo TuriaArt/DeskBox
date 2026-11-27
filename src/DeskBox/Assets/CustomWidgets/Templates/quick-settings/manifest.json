@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.quick-settings",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "🎛️",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "device-state",
+    "control-tile",
+    "system-control",
+    "visual-containers"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 260
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 300
+  },
+  "sources": [
+    {
+      "id": "device",
+      "type": "deviceState",
+      "intervalMs": 3000
+    }
+  ],
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$device.wifiStatus}",
+    "glyph": "🎛️",
+    "badge": "${$device.volumeText}"
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "qs_tiles",
+        "qs_shortcuts"
+      ]
+    },
+    "qs_tiles": {
+      "type": "Grid",
+      "columns": "*,*",
+      "spacing": 8,
+      "children": [
+        "qs_wifi",
+        "qs_bluetooth",
+        "qs_theme",
+        "qs_awake",
+        "qs_mute",
+        "qs_lock"
+      ]
+    },
+    "qs_wifi": {
+      "type": "ControlTile",
+      "icon": "wifi",
+      "title": "${$i18n.tileWifi}",
+      "subtitle": "${$device.wifiStatus}",
+      "value": "${$device.wifiEnabled}",
+      "height": 56,
+      "onClick": {
+        "type": "system.control",
+        "targetId": "radio.wifiToggle"
+      }
+    },
+    "qs_bluetooth": {
+      "type": "ControlTile",
+      "icon": "bluetooth",
+      "title": "${$i18n.tileBluetooth}",
+      "subtitle": "${$device.bluetoothStatus}",
+      "value": "${$device.bluetoothEnabled}",
+      "height": 56,
+      "onClick": {
+        "type": "system.control",
+        "targetId": "radio.bluetoothToggle"
+      }
+    },
+    "qs_theme": {
+      "type": "ControlTile",
+      "icon": "moon",
+      "title": "${$i18n.tileTheme}",
+      "subtitle": "${$device.themeStatus}",
+      "value": "${$device.darkTheme}",
+      "height": 56,
+      "onClick": {
+        "type": "system.control",
+        "targetId": "theme.toggle"
+      }
+    },
+    "qs_awake": {
+      "type": "ControlTile",
+      "icon": "coffee",
+      "title": "${$i18n.tileAwake}",
+      "subtitle": "${$device.keepAwakeStatus}",
+      "value": "${$device.keepAwake}",
+      "height": 56,
+      "onClick": {
+        "type": "system.control",
+        "targetId": "power.keepAwakeToggle"
+      }
+    },
+    "qs_mute": {
+      "type": "ControlTile",
+      "icon": "${$device.muted == 'true' ? 'mute' : 'volume'}",
+      "title": "${$i18n.tileMute}",
+      "subtitle": "${$device.volumeText}",
+      "value": "${$device.muted}",
+      "height": 56,
+      "onClick": {
+        "type": "system.control",
+        "targetId": "volume.muteToggle"
+      }
+    },
+    "qs_lock": {
+      "type": "ControlTile",
+      "icon": "lock",
+      "title": "${$i18n.tileLock}",
+      "subtitle": "${$i18n.lockHint}",
+      "height": 56,
+      "onClick": {
+        "type": "system.control",
+        "targetId": "power.lock"
+      }
+    },
+    "qs_shortcuts": {
+      "type": "Grid",
+      "columns": "*,*,*",
+      "columnSpacing": 6,
+      "children": [
+        "qs_open_sound",
+        "qs_open_display",
+        "qs_open_network"
+      ]
+    },
+    "qs_open_sound": {
+      "type": "Button",
+      "column": 0,
+      "text": "${$i18n.btnSound}",
+      "variant": "subtle",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "system.openSetting",
+        "targetId": "sound"
+      }
+    },
+    "qs_open_display": {
+      "type": "Button",
+      "column": 1,
+      "text": "${$i18n.btnDisplay}",
+      "variant": "subtle",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "system.openSetting",
+        "targetId": "display"
+      }
+    },
+    "qs_open_network": {
+      "type": "Button",
+      "column": 2,
+      "text": "${$i18n.btnNetwork}",
+      "variant": "subtle",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "system.openSetting",
+        "targetId": "network"
+      }
+    }
+  }
+}

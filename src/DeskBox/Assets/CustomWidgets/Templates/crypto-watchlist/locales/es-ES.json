@@ -1,0 +1,12 @@
+{
+  "widgetName": "Seguimiento cripto",
+  "widgetDescription": "Precios en vivo y variación en 24 horas de tus monedas desde CoinGecko, sin clave de API.",
+  "setCoins": "Monedas",
+  "setVs": "Divisa de cotización",
+  "tipRefresh": "Actualizar precios",
+  "statusLoading": "Cargando precios…",
+  "statusError": "No se pudieron cargar los precios",
+  "lblUpdated": "Actualizado",
+  "emptyTitle": "Aún no hay precios",
+  "emptyHint": "Los precios se actualizan automáticamente cada 5 minutos"
+}

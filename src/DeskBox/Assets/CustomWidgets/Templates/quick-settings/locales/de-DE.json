@@ -1,0 +1,14 @@
+{
+  "widgetName": "Schnelleinstellungen",
+  "widgetDescription": "Windows-Schnellschalter auf dem Desktop: WLAN, Bluetooth, dunkler Modus, wach bleiben, Stummschalten und Sperren.",
+  "tileWifi": "WLAN",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "Dunkler Modus",
+  "tileAwake": "Wach bleiben",
+  "tileMute": "Stumm",
+  "tileLock": "Sperren",
+  "lockHint": "Diesen PC sperren",
+  "btnSound": "Sound",
+  "btnDisplay": "Anzeige",
+  "btnNetwork": "Netzwerk"
+}

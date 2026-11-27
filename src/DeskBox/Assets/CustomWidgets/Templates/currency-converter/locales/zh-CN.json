@@ -1,0 +1,13 @@
+{
+  "widgetName": "汇率换算",
+  "widgetDescription": "按实时汇率在 17 种货币之间换算，无需 API 密钥。",
+  "setHome": "本币",
+  "phAmount": "金额",
+  "tipSwap": "交换货币",
+  "tipRefresh": "刷新汇率",
+  "statusLoading": "正在加载汇率…",
+  "statusError": "汇率加载失败",
+  "lblUpdated": "更新于",
+  "emptyTitle": "暂无汇率",
+  "emptyHint": "汇率每 30 分钟自动刷新"
+}
