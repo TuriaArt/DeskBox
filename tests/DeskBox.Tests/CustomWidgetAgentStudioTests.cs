@@ -2892,7 +2892,7 @@ public sealed class CustomWidgetAgentStudioTests
     [Fact]
     public void UnifiedOfficialTemplates_DeadSettingsValidation_And_ProactiveSettingsPrompts_MeetContract()
     {
-        // 1. Unified 10 official templates in offline catalog: zero overlap with Todo/File/Clipboard, every template exposes rich settings
+        // 1. Unified official templates in offline catalog: zero overlap with Todo/File/Clipboard, every template exposes rich settings
         string tempCacheDir = Path.Combine(Path.GetTempPath(), $"deskbox-cw-unified-{Guid.NewGuid():N}");
         try
         {
@@ -2900,7 +2900,7 @@ public sealed class CustomWidgetAgentStudioTests
                 tempCacheDir,
                 new StubAiHttpMessageHandler((_, _) => throw new HttpRequestException("offline")));
             IReadOnlyList<CustomWidgetCatalogEntry> official = catalog.GetMergedOfficialTemplates();
-            Assert.Equal(14, official.Count);
+            Assert.Equal(25, official.Count);
             Assert.Contains(official, e => e.Id == CustomWidgetTemplates.WorldClockTemplateId);
             Assert.Contains(official, e => e.Id == CustomWidgetTemplates.DevToolboxTemplateId);
             Assert.Contains(official, e => e.Id == CustomWidgetTemplates.FocusDialTemplateId);

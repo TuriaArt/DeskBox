@@ -5,5 +5,6 @@
   "lblBrightness": "Helligkeit",
   "btnOutput": "Ausgabe",
   "btnNightLight": "Nachtmodus",
-  "tipMute": "Stumm ein/aus"
+  "tipMute": "Stumm ein/aus",
+  "setBrightness": "Helligkeit anzeigen (Laptops und integrierte Displays)"
 }

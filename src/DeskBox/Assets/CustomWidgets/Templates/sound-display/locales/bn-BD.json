@@ -5,5 +5,6 @@
   "lblBrightness": "উজ্জ্বলতা",
   "btnOutput": "আউটপুট",
   "btnNightLight": "নাইট লাইট",
-  "tipMute": "মিউট / আনমিউট"
+  "tipMute": "মিউট / আনমিউট",
+  "setBrightness": "উজ্জ্বলতা দেখান (ল্যাপটপ ও বিল্ট-ইন স্ক্রিন)"
 }

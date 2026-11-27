@@ -12,6 +12,5 @@
   "running": "en marcha",
   "stopped": "detenido",
   "emptyTitle": "Aún no hay vueltas",
-  "emptyHint": "Pulsa Vuelta mientras corre para guardar parciales",
-  "tipRefresh": "Actualizar"
+  "emptyHint": "Pulsa Vuelta mientras corre para guardar parciales"
 }

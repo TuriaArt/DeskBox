@@ -10,5 +10,6 @@
   "lockHint": "Bloquear este PC",
   "btnSound": "Sonido",
   "btnDisplay": "Pantalla",
-  "btnNetwork": "Red"
+  "btnNetwork": "Red",
+  "setShortcuts": "Mostrar accesos a Configuración"
 }

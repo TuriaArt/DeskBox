@@ -6,6 +6,5 @@
   "btnPause": "Pause",
   "btnResume": "Resume",
   "btnReset": "Reset",
-  "doneToast": "Timer finished",
-  "tipRefresh": "Refresh"
+  "doneToast": "Timer finished"
 }

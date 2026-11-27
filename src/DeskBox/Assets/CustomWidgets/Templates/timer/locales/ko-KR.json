@@ -6,6 +6,5 @@
   "btnPause": "일시정지",
   "btnResume": "계속",
   "btnReset": "초기화",
-  "doneToast": "타이머 종료",
-  "tipRefresh": "새로 고침"
+  "doneToast": "타이머 종료"
 }

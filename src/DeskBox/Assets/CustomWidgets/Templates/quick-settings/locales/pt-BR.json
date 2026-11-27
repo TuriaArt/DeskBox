@@ -10,5 +10,6 @@
   "lockHint": "Bloquear este PC",
   "btnSound": "Som",
   "btnDisplay": "Tela",
-  "btnNetwork": "Rede"
+  "btnNetwork": "Rede",
+  "setShortcuts": "Mostrar atalhos de configurações"
 }

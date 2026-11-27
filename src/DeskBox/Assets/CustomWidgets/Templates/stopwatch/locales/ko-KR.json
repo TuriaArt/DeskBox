@@ -12,6 +12,5 @@
   "running": "실행 중",
   "stopped": "정지됨",
   "emptyTitle": "아직 랩이 없습니다",
-  "emptyHint": "실행 중에 랩을 눌러 구간 기록을 남기세요",
-  "tipRefresh": "새로 고침"
+  "emptyHint": "실행 중에 랩을 눌러 구간 기록을 남기세요"
 }

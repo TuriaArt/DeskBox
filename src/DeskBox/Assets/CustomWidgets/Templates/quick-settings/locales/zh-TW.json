@@ -10,5 +10,6 @@
   "lockHint": "鎖定這台電腦",
   "btnSound": "聲音",
   "btnDisplay": "顯示",
-  "btnNetwork": "網路"
+  "btnNetwork": "網路",
+  "setShortcuts": "顯示設定捷徑"
 }

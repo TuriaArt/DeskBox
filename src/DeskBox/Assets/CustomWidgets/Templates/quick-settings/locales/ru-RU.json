@@ -10,5 +10,6 @@
   "lockHint": "Заблокировать ПК",
   "btnSound": "Звук",
   "btnDisplay": "Экран",
-  "btnNetwork": "Сеть"
+  "btnNetwork": "Сеть",
+  "setShortcuts": "Показывать ярлыки настроек"
 }

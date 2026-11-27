@@ -10,5 +10,6 @@
   "lockHint": "قفل هذا الكمبيوتر",
   "btnSound": "الصوت",
   "btnDisplay": "الشاشة",
-  "btnNetwork": "الشبكة"
+  "btnNetwork": "الشبكة",
+  "setShortcuts": "إظهار اختصارات الإعدادات"
 }

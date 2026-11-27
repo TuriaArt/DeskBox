@@ -12,6 +12,5 @@
   "running": "进行中",
   "stopped": "已停止",
   "emptyTitle": "还没有计圈",
-  "emptyHint": "运行时按“计圈”记录分段",
-  "tipRefresh": "刷新"
+  "emptyHint": "运行时按“计圈”记录分段"
 }

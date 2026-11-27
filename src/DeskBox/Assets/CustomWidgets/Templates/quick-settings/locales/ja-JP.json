@@ -10,5 +10,6 @@
   "lockHint": "この PC をロック",
   "btnSound": "サウンド",
   "btnDisplay": "ディスプレイ",
-  "btnNetwork": "ネットワーク"
+  "btnNetwork": "ネットワーク",
+  "setShortcuts": "設定へのショートカットを表示"
 }

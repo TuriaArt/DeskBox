@@ -12,6 +12,5 @@
   "running": "running",
   "stopped": "stopped",
   "emptyTitle": "No laps yet",
-  "emptyHint": "Press Lap while running to record splits",
-  "tipRefresh": "Refresh"
+  "emptyHint": "Press Lap while running to record splits"
 }

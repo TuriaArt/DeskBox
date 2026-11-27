@@ -10,5 +10,6 @@
   "lockHint": "Verrouiller ce PC",
   "btnSound": "Son",
   "btnDisplay": "Affichage",
-  "btnNetwork": "Réseau"
+  "btnNetwork": "Réseau",
+  "setShortcuts": "Afficher les raccourcis vers les paramètres"
 }

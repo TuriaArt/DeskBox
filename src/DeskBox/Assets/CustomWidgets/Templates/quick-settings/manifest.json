@@ -28,6 +28,14 @@
       "intervalMs": 3000
     }
   ],
+  "settings": [
+    {
+      "key": "showShortcuts",
+      "type": "toggle",
+      "label": "${$i18n.setShortcuts}",
+      "default": true
+    }
+  ],
   "capsule": {
     "title": "${$i18n.widgetName}",
     "summary": "${$device.wifiStatus}",
@@ -137,7 +145,8 @@
         "qs_open_sound",
         "qs_open_display",
         "qs_open_network"
-      ]
+      ],
+      "when": "${$settings.showShortcuts == 'true'}"
     },
     "qs_open_sound": {
       "type": "Button",

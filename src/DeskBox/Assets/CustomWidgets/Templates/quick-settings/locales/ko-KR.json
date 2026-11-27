@@ -10,5 +10,6 @@
   "lockHint": "이 PC 잠그기",
   "btnSound": "소리",
   "btnDisplay": "디스플레이",
-  "btnNetwork": "네트워크"
+  "btnNetwork": "네트워크",
+  "setShortcuts": "설정 바로 가기 표시"
 }

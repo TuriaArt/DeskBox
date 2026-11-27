@@ -12,6 +12,5 @@
   "running": "läuft",
   "stopped": "gestoppt",
   "emptyTitle": "Noch keine Runden",
-  "emptyHint": "Drücke während des Laufens auf „Runde“, um Zwischenzeiten zu speichern",
-  "tipRefresh": "Aktualisieren"
+  "emptyHint": "Drücke während des Laufens auf „Runde“, um Zwischenzeiten zu speichern"
 }

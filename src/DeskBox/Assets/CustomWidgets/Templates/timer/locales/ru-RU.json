@@ -6,6 +6,5 @@
   "btnPause": "Пауза",
   "btnResume": "Продолжить",
   "btnReset": "Сброс",
-  "doneToast": "Таймер завершён",
-  "tipRefresh": "Обновить"
+  "doneToast": "Таймер завершён"
 }

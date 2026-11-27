@@ -5,5 +5,6 @@
   "lblBrightness": "Brilho",
   "btnOutput": "Saída",
   "btnNightLight": "Luz noturna",
-  "tipMute": "Ativar / desativar som"
+  "tipMute": "Ativar / desativar som",
+  "setBrightness": "Mostrar brilho (notebooks e telas integradas)"
 }

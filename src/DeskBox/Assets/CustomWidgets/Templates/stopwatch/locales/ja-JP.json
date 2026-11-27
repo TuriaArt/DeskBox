@@ -12,6 +12,5 @@
   "running": "計測中",
   "stopped": "停止",
   "emptyTitle": "ラップはまだありません",
-  "emptyHint": "計測中に「ラップ」を押すとスプリットを記録します",
-  "tipRefresh": "更新"
+  "emptyHint": "計測中に「ラップ」を押すとスプリットを記録します"
 }

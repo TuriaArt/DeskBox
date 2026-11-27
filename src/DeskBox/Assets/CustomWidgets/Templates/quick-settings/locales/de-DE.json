@@ -10,5 +10,6 @@
   "lockHint": "Diesen PC sperren",
   "btnSound": "Sound",
   "btnDisplay": "Anzeige",
-  "btnNetwork": "Netzwerk"
+  "btnNetwork": "Netzwerk",
+  "setShortcuts": "Einstellungsverknüpfungen anzeigen"
 }

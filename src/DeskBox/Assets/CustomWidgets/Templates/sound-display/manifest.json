@@ -28,6 +28,14 @@
       "intervalMs": 3000
     }
   ],
+  "settings": [
+    {
+      "key": "showBrightness",
+      "type": "toggle",
+      "label": "${$i18n.setBrightness}",
+      "default": true
+    }
+  ],
   "capsule": {
     "title": "${$i18n.widgetName}",
     "summary": "${$device.volumeText}",
@@ -127,7 +135,8 @@
       "children": [
         "sd_bright_slider",
         "sd_bright_row"
-      ]
+      ],
+      "when": "${$settings.showBrightness == 'true'}"
     },
     "sd_bright_slider": {
       "type": "Slider",

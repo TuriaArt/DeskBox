@@ -10,5 +10,6 @@
   "lockHint": "锁定这台电脑",
   "btnSound": "声音",
   "btnDisplay": "显示",
-  "btnNetwork": "网络"
+  "btnNetwork": "网络",
+  "setShortcuts": "显示设置快捷入口"
 }

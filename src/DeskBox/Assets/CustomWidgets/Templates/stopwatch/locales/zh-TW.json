@@ -12,6 +12,5 @@
   "running": "計時中",
   "stopped": "已停止",
   "emptyTitle": "尚無計圈紀錄",
-  "emptyHint": "計時中按「計圈」記錄分段時間",
-  "tipRefresh": "重新整理"
+  "emptyHint": "計時中按「計圈」記錄分段時間"
 }

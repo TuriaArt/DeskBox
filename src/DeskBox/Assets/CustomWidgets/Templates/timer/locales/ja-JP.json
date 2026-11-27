@@ -6,6 +6,5 @@
   "btnPause": "一時停止",
   "btnResume": "再開",
   "btnReset": "リセット",
-  "doneToast": "タイマーが終了しました",
-  "tipRefresh": "更新"
+  "doneToast": "タイマーが終了しました"
 }

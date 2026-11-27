@@ -5,5 +5,6 @@
   "lblBrightness": "चमक",
   "btnOutput": "आउटपुट",
   "btnNightLight": "नाइट लाइट",
-  "tipMute": "म्यूट / अनम्यूट"
+  "tipMute": "म्यूट / अनम्यूट",
+  "setBrightness": "चमक दिखाएँ (लैपटॉप और बिल्ट-इन स्क्रीन)"
 }

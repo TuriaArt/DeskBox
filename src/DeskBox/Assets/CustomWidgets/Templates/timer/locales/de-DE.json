@@ -6,6 +6,5 @@
   "btnPause": "Pause",
   "btnResume": "Fortsetzen",
   "btnReset": "Zurücksetzen",
-  "doneToast": "Timer abgelaufen",
-  "tipRefresh": "Aktualisieren"
+  "doneToast": "Timer abgelaufen"
 }

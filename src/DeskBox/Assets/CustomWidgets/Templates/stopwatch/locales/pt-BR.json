@@ -12,6 +12,5 @@
   "running": "rodando",
   "stopped": "parado",
   "emptyTitle": "Nenhuma volta ainda",
-  "emptyHint": "Toque em Volta durante a contagem para registrar parciais",
-  "tipRefresh": "Atualizar"
+  "emptyHint": "Toque em Volta durante a contagem para registrar parciais"
 }

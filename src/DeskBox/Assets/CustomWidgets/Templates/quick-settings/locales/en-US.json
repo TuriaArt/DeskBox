@@ -10,5 +10,6 @@
   "lockHint": "Lock this PC",
   "btnSound": "Sound",
   "btnDisplay": "Display",
-  "btnNetwork": "Network"
+  "btnNetwork": "Network",
+  "setShortcuts": "Show settings shortcuts"
 }

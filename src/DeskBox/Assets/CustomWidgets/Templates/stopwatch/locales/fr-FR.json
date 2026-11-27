@@ -12,6 +12,5 @@
   "running": "en cours",
   "stopped": "arrêté",
   "emptyTitle": "Aucun tour pour le moment",
-  "emptyHint": "Appuyez sur Tour pendant le chrono pour enregistrer des temps intermédiaires",
-  "tipRefresh": "Actualiser"
+  "emptyHint": "Appuyez sur Tour pendant le chrono pour enregistrer des temps intermédiaires"
 }
