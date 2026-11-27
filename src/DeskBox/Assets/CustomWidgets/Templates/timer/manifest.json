@@ -76,45 +76,21 @@
       "tone": "subtle",
       "padding": "12,10",
       "children": [
-        "tm_zstack"
-      ]
-    },
-    "tm_zstack": {
-      "type": "ZStack",
-      "width": 156,
-      "height": 156,
-      "horizontalAlignment": "center",
-      "children": [
-        "tm_ring",
-        "tm_center_stack"
+        "tm_ring"
       ]
     },
     "tm_ring": {
-      "type": "RingGauge",
+      "type": "RadialGauge",
       "size": 150,
       "value": "${$computed.pct}",
       "max": 100,
-      "unit": "%",
-      "color": "rose"
-    },
-    "tm_center_stack": {
-      "type": "Stack",
-      "spacing": 2,
-      "horizontalAlignment": "center",
-      "verticalAlignment": "center",
-      "children": [
-        "tm_time"
-      ]
-    },
-    "tm_time": {
-      "type": "Text",
-      "dir": "ltr",
       "text": "${$computed.displayText}",
-      "fontFamily": "mono",
       "fontSize": 34,
-      "fontWeight": "semiBold",
-      "horizontalAlignment": "center",
-      "maxLines": 1
+      "color": "rose",
+      "startAngle": 135,
+      "sweepAngle": 270,
+      "thickness": 12,
+      "horizontalAlignment": "center"
     },
     "tm_presets_grid": {
       "type": "Grid",
