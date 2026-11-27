@@ -91,9 +91,8 @@
       "type": "Text",
       "dir": "ltr",
       "text": "${$computed.elapsedText}",
-      "fontFamily": "mono",
+      "style": "title",
       "fontSize": 36,
-      "fontWeight": "semiBold",
       "horizontalAlignment": "center",
       "maxLines": 1
     },

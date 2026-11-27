@@ -87,38 +87,27 @@
       "columnSpacing": 12,
       "verticalAlignment": "center",
       "children": [
-        "mp_gauge",
+        "mp_ring",
         "mp_bar",
         "mp_info",
         "mp_emoji"
       ]
     },
-    "mp_gauge": {
-      "type": "ZStack",
-      "column": 0,
-      "width": 92,
-      "height": 92,
-      "children": [
-        "mp_ring",
-        "mp_ring_text"
-      ],
-      "when": "${$computed.useRing}"
-    },
     "mp_ring": {
-      "type": "RingGauge",
+      "type": "RadialGauge",
+      "column": 0,
       "size": 92,
       "value": "${$computed.pct}",
       "max": 100,
-      "unit": "%",
-      "color": "blue"
-    },
-    "mp_ring_text": {
-      "type": "Text",
-      "text": "${$computed.pctText}",
-      "style": "caption",
-      "fontWeight": "semiBold",
-      "horizontalAlignment": "center",
-      "verticalAlignment": "center"
+      "color": "blue",
+      "startAngle": 135,
+      "sweepAngle": 270,
+      "thickness": 9,
+      "verticalAlignment": "center",
+      "children": [
+        "mp_ring_icon"
+      ],
+      "when": "${$computed.useRing}"
     },
     "mp_bar": {
       "type": "ProgressBar",
@@ -159,7 +148,8 @@
       "column": 2,
       "text": "🌗",
       "style": "body",
-      "verticalAlignment": "center"
+      "verticalAlignment": "center",
+      "when": "${$computed.useBar}"
     },
     "mp_detail_card": {
       "type": "Card",
@@ -218,6 +208,13 @@
       "text": "${$computed.leftText}",
       "style": "body",
       "fontWeight": "semiBold"
+    },
+    "mp_ring_icon": {
+      "type": "Text",
+      "text": "🌗",
+      "fontSize": 24,
+      "horizontalAlignment": "center",
+      "verticalAlignment": "center"
     }
   }
 }
