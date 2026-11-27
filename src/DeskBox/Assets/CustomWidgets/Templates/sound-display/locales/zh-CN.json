@@ -1,0 +1,10 @@
+{
+  "widgetName": "声音与显示",
+  "widgetDescription": "主音量、静音、音频输出和屏幕亮度集中在一张卡片里。",
+  "lblVolume": "音量",
+  "lblBrightness": "亮度",
+  "btnOutput": "输出设备",
+  "btnNightLight": "夜间模式",
+  "tipMute": "静音 / 取消静音",
+  "setBrightness": "显示亮度（笔记本和内置屏幕）"
+}

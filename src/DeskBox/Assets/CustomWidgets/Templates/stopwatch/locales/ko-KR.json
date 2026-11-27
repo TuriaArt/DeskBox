@@ -1,0 +1,16 @@
+{
+  "widgetName": "스톱워치",
+  "widgetDescription": "바에서 시작, 일시정지, 랩 기록; 카드에 모든 랩이 저장됩니다.",
+  "setLapSound": "랩 기록 시 소리",
+  "setToggleSound": "시작/일시정지 시 소리",
+  "lblLap": "랩",
+  "btnStart": "시작",
+  "btnPause": "일시정지",
+  "btnLap": "랩",
+  "btnReset": "초기화",
+  "lapsUnit": "랩",
+  "running": "실행 중",
+  "stopped": "정지됨",
+  "emptyTitle": "아직 랩이 없습니다",
+  "emptyHint": "실행 중에 랩을 눌러 구간 기록을 남기세요"
+}

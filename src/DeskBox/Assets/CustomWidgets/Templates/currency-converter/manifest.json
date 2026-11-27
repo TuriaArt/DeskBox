@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.currency-converter",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "💱",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "http-and-rss-feeds",
+    "script-sandbox",
+    "forms-inputs",
+    "collections-lists",
+    "visual-containers",
+    "widget-settings"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 320
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 380
+  },
+  "settings": [
+    {
+      "key": "baseCurrency",
+      "type": "choice",
+      "label": "${$i18n.setHome}",
+      "default": "USD",
+      "options": [
+        {
+          "value": "USD",
+          "label": "USD"
+        },
+        {
+          "value": "EUR",
+          "label": "EUR"
+        },
+        {
+          "value": "GBP",
+          "label": "GBP"
+        },
+        {
+          "value": "CHF",
+          "label": "CHF"
+        },
+        {
+          "value": "JPY",
+          "label": "JPY"
+        },
+        {
+          "value": "CNY",
+          "label": "CNY"
+        },
+        {
+          "value": "RUB",
+          "label": "RUB"
+        },
+        {
+          "value": "BYN",
+          "label": "BYN"
+        },
+        {
+          "value": "UAH",
+          "label": "UAH"
+        },
+        {
+          "value": "KZT",
+          "label": "KZT"
+        },
+        {
+          "value": "PLN",
+          "label": "PLN"
+        },
+        {
+          "value": "TRY",
+          "label": "TRY"
+        },
+        {
+          "value": "CAD",
+          "label": "CAD"
+        },
+        {
+          "value": "AUD",
+          "label": "AUD"
+        },
+        {
+          "value": "INR",
+          "label": "INR"
+        },
+        {
+          "value": "KRW",
+          "label": "KRW"
+        },
+        {
+          "value": "BRL",
+          "label": "BRL"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "fx",
+      "type": "httpJson",
+      "url": "https://open.er-api.com/v6/latest/${$settings.baseCurrency}",
+      "intervalMs": 1800000
+    }
+  ],
+  "state": {
+    "amount": "100",
+    "fromCur": "USD",
+    "toCur": "EUR",
+    "rates": {},
+    "ratesBase": "",
+    "ratesAtMs": 0
+  },
+  "script": {
+    "entry": "logic.js",
+    "tickIntervalMs": 0
+  },
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$computed.capsuleSummary}",
+    "glyph": "💱",
+    "badge": "${$computed.capsuleBadge}"
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "fx_convert_card",
+        "fx_watch_list",
+        "fx_footer"
+      ]
+    },
+    "fx_convert_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "12,10",
+      "spacing": 8,
+      "children": [
+        "fx_from_row",
+        "fx_to_row",
+        "fx_rate_row"
+      ]
+    },
+    "fx_from_row": {
+      "type": "Grid",
+      "columns": "*,96",
+      "columnSpacing": 8,
+      "children": [
+        "fx_amount_input",
+        "fx_from_select"
+      ]
+    },
+    "fx_amount_input": {
+      "type": "Input",
+      "column": 0,
+      "bind": "state.amount",
+      "placeholder": "${$i18n.phAmount}",
+      "onChange": {
+        "type": "script.run",
+        "fn": "onAmountInput"
+      }
+    },
+    "fx_from_select": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.fromCur",
+      "options": [
+        {
+          "value": "USD",
+          "label": "USD"
+        },
+        {
+          "value": "EUR",
+          "label": "EUR"
+        },
+        {
+          "value": "GBP",
+          "label": "GBP"
+        },
+        {
+          "value": "CHF",
+          "label": "CHF"
+        },
+        {
+          "value": "JPY",
+          "label": "JPY"
+        },
+        {
+          "value": "CNY",
+          "label": "CNY"
+        },
+        {
+          "value": "RUB",
+          "label": "RUB"
+        },
+        {
+          "value": "BYN",
+          "label": "BYN"
+        },
+        {
+          "value": "UAH",
+          "label": "UAH"
+        },
+        {
+          "value": "KZT",
+          "label": "KZT"
+        },
+        {
+          "value": "PLN",
+          "label": "PLN"
+        },
+        {
+          "value": "TRY",
+          "label": "TRY"
+        },
+        {
+          "value": "CAD",
+          "label": "CAD"
+        },
+        {
+          "value": "AUD",
+          "label": "AUD"
+        },
+        {
+          "value": "INR",
+          "label": "INR"
+        },
+        {
+          "value": "KRW",
+          "label": "KRW"
+        },
+        {
+          "value": "BRL",
+          "label": "BRL"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "fx_to_row": {
+      "type": "Grid",
+      "columns": "*,96",
+      "columnSpacing": 8,
+      "children": [
+        "fx_result",
+        "fx_to_select"
+      ]
+    },
+    "fx_result": {
+      "type": "Text",
+      "column": 0,
+      "dir": "ltr",
+      "text": "${$computed.resultText}",
+      "style": "title",
+      "fontWeight": "semiBold",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "fx_to_select": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.toCur",
+      "options": [
+        {
+          "value": "USD",
+          "label": "USD"
+        },
+        {
+          "value": "EUR",
+          "label": "EUR"
+        },
+        {
+          "value": "GBP",
+          "label": "GBP"
+        },
+        {
+          "value": "CHF",
+          "label": "CHF"
+        },
+        {
+          "value": "JPY",
+          "label": "JPY"
+        },
+        {
+          "value": "CNY",
+          "label": "CNY"
+        },
+        {
+          "value": "RUB",
+          "label": "RUB"
+        },
+        {
+          "value": "BYN",
+          "label": "BYN"
+        },
+        {
+          "value": "UAH",
+          "label": "UAH"
+        },
+        {
+          "value": "KZT",
+          "label": "KZT"
+        },
+        {
+          "value": "PLN",
+          "label": "PLN"
+        },
+        {
+          "value": "TRY",
+          "label": "TRY"
+        },
+        {
+          "value": "CAD",
+          "label": "CAD"
+        },
+        {
+          "value": "AUD",
+          "label": "AUD"
+        },
+        {
+          "value": "INR",
+          "label": "INR"
+        },
+        {
+          "value": "KRW",
+          "label": "KRW"
+        },
+        {
+          "value": "BRL",
+          "label": "BRL"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "fx_rate_row": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "verticalAlignment": "center",
+      "children": [
+        "fx_rate_text",
+        "fx_swap_btn"
+      ]
+    },
+    "fx_rate_text": {
+      "type": "Text",
+      "column": 0,
+      "dir": "ltr",
+      "text": "${$computed.rateLine}",
+      "style": "caption",
+      "color": "secondary",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "fx_swap_btn": {
+      "type": "IconButton",
+      "column": 1,
+      "icon": "swap",
+      "size": 28,
+      "variant": "subtle",
+      "tooltip": "${$i18n.tipSwap}",
+      "onClick": {
+        "type": "script.run",
+        "fn": "swapCurrencies"
+      }
+    },
+    "fx_watch_list": {
+      "type": "List",
+      "items": "${$computed.watch}",
+      "itemTemplate": "fx_watch_row",
+      "variant": "divided",
+      "emptyState": {
+        "icon": "💱",
+        "title": "${$i18n.emptyTitle}",
+        "subtitle": "${$i18n.emptyHint}"
+      }
+    },
+    "fx_watch_row": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "verticalAlignment": "center",
+      "children": [
+        "fx_watch_left",
+        "fx_watch_right"
+      ]
+    },
+    "fx_watch_left": {
+      "type": "Text",
+      "column": 0,
+      "dir": "ltr",
+      "text": "${$item.left}",
+      "style": "body",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "fx_watch_right": {
+      "type": "Text",
+      "column": 1,
+      "dir": "ltr",
+      "text": "${$item.right}",
+      "style": "body",
+      "fontWeight": "semiBold",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "fx_footer": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "verticalAlignment": "center",
+      "children": [
+        "fx_status",
+        "fx_refresh_btn"
+      ]
+    },
+    "fx_status": {
+      "type": "Text",
+      "column": 0,
+      "text": "${$computed.statusText}",
+      "style": "caption",
+      "color": "muted",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "fx_refresh_btn": {
+      "type": "IconButton",
+      "column": 1,
+      "icon": "refresh",
+      "size": 28,
+      "variant": "subtle",
+      "tooltip": "${$i18n.tipRefresh}",
+      "onClick": {
+        "type": "source.refresh",
+        "targetId": "fx"
+      }
+    }
+  }
+}

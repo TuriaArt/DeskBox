@@ -1,0 +1,12 @@
+{
+  "widgetName": "今月の進捗",
+  "widgetDescription": "今月がどこまで進んだか、経過日数と残り日数を表示します。",
+  "setStyle": "表示",
+  "optRing": "リング",
+  "optBar": "バー",
+  "subMonth": "今月",
+  "lblDay": "日目",
+  "lblLeft": "残り",
+  "lblDaysLeft": "日残り",
+  "tipRefresh": "更新"
+}

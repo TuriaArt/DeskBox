@@ -1,0 +1,12 @@
+{
+  "widgetName": "今年の進捗",
+  "widgetDescription": "今年がどこまで進んだか、年内の通算日と残り日数を表示します。",
+  "setStyle": "表示",
+  "optRing": "リング",
+  "optBar": "バー",
+  "subYear": "今年",
+  "lblDay": "日目",
+  "lblLeft": "残り",
+  "lblDaysLeft": "日残り",
+  "tipRefresh": "更新"
+}

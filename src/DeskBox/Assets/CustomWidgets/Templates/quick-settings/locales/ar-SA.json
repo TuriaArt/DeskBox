@@ -1,0 +1,15 @@
+{
+  "widgetName": "الإعدادات السريعة",
+  "widgetDescription": "مفاتيح Windows السريعة على سطح المكتب: Wi-Fi وBluetooth والوضع الداكن والإبقاء على التشغيل وكتم الصوت والقفل.",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "الوضع الداكن",
+  "tileAwake": "إبقاء التشغيل",
+  "tileMute": "كتم",
+  "tileLock": "قفل",
+  "lockHint": "قفل هذا الكمبيوتر",
+  "btnSound": "الصوت",
+  "btnDisplay": "الشاشة",
+  "btnNetwork": "الشبكة",
+  "setShortcuts": "إظهار اختصارات الإعدادات"
+}

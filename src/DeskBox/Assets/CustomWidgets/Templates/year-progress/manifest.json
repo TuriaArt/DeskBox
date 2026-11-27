@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.year-progress",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "🗓️",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "script-sandbox",
+    "visual-containers",
+    "micro-charts",
+    "forms-inputs",
+    "widget-settings",
+    "advanced-inputs-and-styling"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 230
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 300
+  },
+  "settings": [
+    {
+      "key": "style",
+      "type": "choice",
+      "label": "${$i18n.setStyle}",
+      "default": "ring",
+      "options": [
+        {
+          "value": "ring",
+          "label": "${$i18n.optRing}"
+        },
+        {
+          "value": "bar",
+          "label": "${$i18n.optBar}"
+        }
+      ]
+    }
+  ],
+  "state": {},
+  "script": {
+    "entry": "logic.js",
+    "tickIntervalMs": 60000
+  },
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$computed.capsuleSummary}",
+    "glyph": "🗓️",
+    "badge": "${$computed.pctText}",
+    "progress": "${$computed.pct}",
+    "primaryAction": {
+      "icon": "refresh",
+      "tooltip": "${$i18n.tipRefresh}",
+      "onClick": {
+        "type": "script.run",
+        "fn": "refresh"
+      }
+    }
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "yp_summary_card",
+        "yp_detail_card"
+      ]
+    },
+    "yp_summary_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "12,10",
+      "spacing": 8,
+      "children": [
+        "yp_summary_grid"
+      ]
+    },
+    "yp_summary_grid": {
+      "type": "Grid",
+      "columns": "Auto,*,Auto",
+      "columnSpacing": 12,
+      "verticalAlignment": "center",
+      "children": [
+        "yp_gauge",
+        "yp_bar",
+        "yp_info",
+        "yp_emoji"
+      ]
+    },
+    "yp_gauge": {
+      "type": "ZStack",
+      "column": 0,
+      "width": 92,
+      "height": 92,
+      "children": [
+        "yp_ring",
+        "yp_ring_text"
+      ],
+      "when": "${$computed.useRing}"
+    },
+    "yp_ring": {
+      "type": "RingGauge",
+      "size": 92,
+      "value": "${$computed.pct}",
+      "max": 100,
+      "unit": "%",
+      "color": "violet"
+    },
+    "yp_ring_text": {
+      "type": "Text",
+      "text": "${$computed.pctText}",
+      "style": "caption",
+      "fontWeight": "semiBold",
+      "horizontalAlignment": "center",
+      "verticalAlignment": "center"
+    },
+    "yp_bar": {
+      "type": "ProgressBar",
+      "column": 0,
+      "width": 92,
+      "value": "${$computed.pct}",
+      "max": 100,
+      "color": "violet",
+      "height": 14,
+      "verticalAlignment": "center",
+      "when": "${$computed.useBar}"
+    },
+    "yp_info": {
+      "type": "Stack",
+      "column": 1,
+      "spacing": 3,
+      "verticalAlignment": "center",
+      "children": [
+        "yp_pct_big",
+        "yp_sub"
+      ]
+    },
+    "yp_pct_big": {
+      "type": "Text",
+      "text": "${$computed.pctText}",
+      "style": "hero",
+      "dir": "ltr"
+    },
+    "yp_sub": {
+      "type": "Text",
+      "text": "${$i18n.subYear}",
+      "style": "caption",
+      "color": "secondary",
+      "maxLines": 1
+    },
+    "yp_emoji": {
+      "type": "Text",
+      "column": 2,
+      "text": "🗓️",
+      "style": "body",
+      "verticalAlignment": "center"
+    },
+    "yp_detail_card": {
+      "type": "Card",
+      "tone": "default",
+      "padding": "10,10",
+      "spacing": 6,
+      "children": [
+        "yp_day_row",
+        "yp_left_row"
+      ]
+    },
+    "yp_day_row": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "children": [
+        "yp_day_lbl",
+        "yp_day_val"
+      ]
+    },
+    "yp_day_lbl": {
+      "type": "Text",
+      "column": 0,
+      "text": "${$i18n.lblDay}",
+      "style": "caption",
+      "color": "secondary"
+    },
+    "yp_day_val": {
+      "type": "Text",
+      "column": 1,
+      "dir": "ltr",
+      "text": "${$computed.dayText}",
+      "style": "body",
+      "fontWeight": "semiBold"
+    },
+    "yp_left_row": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "children": [
+        "yp_left_lbl",
+        "yp_left_val"
+      ]
+    },
+    "yp_left_lbl": {
+      "type": "Text",
+      "column": 0,
+      "text": "${$i18n.lblLeft}",
+      "style": "caption",
+      "color": "secondary"
+    },
+    "yp_left_val": {
+      "type": "Text",
+      "column": 1,
+      "dir": "ltr",
+      "text": "${$computed.leftText}",
+      "style": "body",
+      "fontWeight": "semiBold"
+    }
+  }
+}

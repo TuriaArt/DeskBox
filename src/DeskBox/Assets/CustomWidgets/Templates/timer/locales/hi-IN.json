@@ -1,0 +1,10 @@
+{
+  "widgetName": "टाइमर",
+  "widgetDescription": "एक क्लिक में उलटी गिनती — 1, 5, 10, 30 या 60 मिनट चुनें।",
+  "setDoneSound": "समाप्त होने पर ध्वनि",
+  "btnStart": "शुरू",
+  "btnPause": "रोकें",
+  "btnResume": "जारी रखें",
+  "btnReset": "रीसेट",
+  "doneToast": "टाइमर समाप्त"
+}

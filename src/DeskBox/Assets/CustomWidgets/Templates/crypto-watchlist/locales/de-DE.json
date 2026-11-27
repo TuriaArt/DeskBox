@@ -1,0 +1,12 @@
+{
+  "widgetName": "Krypto-Watchlist",
+  "widgetDescription": "Aktuelle Preise und 24-Stunden-Änderung deiner Coins von CoinGecko – ohne API-Schlüssel.",
+  "setCoins": "Coins",
+  "setVs": "Kurswährung",
+  "tipRefresh": "Preise aktualisieren",
+  "statusLoading": "Preise werden geladen…",
+  "statusError": "Preise konnten nicht geladen werden",
+  "lblUpdated": "Aktualisiert",
+  "emptyTitle": "Noch keine Preise",
+  "emptyHint": "Preise werden alle 5 Minuten automatisch aktualisiert"
+}

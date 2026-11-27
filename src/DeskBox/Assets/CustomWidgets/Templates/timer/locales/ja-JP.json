@@ -1,0 +1,10 @@
+{
+  "widgetName": "タイマー",
+  "widgetDescription": "ワンクリックでカウントダウン。1・5・10・30・60分から選べます。",
+  "setDoneSound": "終了時に音を鳴らす",
+  "btnStart": "開始",
+  "btnPause": "一時停止",
+  "btnResume": "再開",
+  "btnReset": "リセット",
+  "doneToast": "タイマーが終了しました"
+}

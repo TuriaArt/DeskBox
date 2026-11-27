@@ -1,0 +1,15 @@
+{
+  "widgetName": "लिंक क्लीनर",
+  "widgetDescription": "कॉपी किए गए लिंक से ट्रैकिंग पैरामीटर (utm, fbclid, gclid आदि) हटाता है, ताकि आप साफ़ लिंक पेस्ट कर सकें।",
+  "setReferral": "रेफ़रल टैग भी हटाएँ (ref, share, si)",
+  "lblClipboard": "क्लिपबोर्ड से",
+  "lblClean": "साफ़ लिंक",
+  "lblRemoved": "हटाए गए",
+  "btnCopy": "साफ़ लिंक कॉपी करें",
+  "btnOpen": "खोलें",
+  "emptyTitle": "क्लिपबोर्ड में कोई लिंक नहीं है",
+  "emptyHint": "कोई भी लिंक कॉपी करें, उसका साफ़ संस्करण यहाँ दिखेगा।",
+  "statusClean": "पहले से साफ़",
+  "statusCopied": "साफ़ लिंक कॉपी हुआ",
+  "lblCleaned": "साफ़ किए गए लिंक"
+}

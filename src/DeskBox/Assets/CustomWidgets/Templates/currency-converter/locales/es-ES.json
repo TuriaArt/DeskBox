@@ -1,0 +1,13 @@
+{
+  "widgetName": "Conversor de divisas",
+  "widgetDescription": "Convierte entre 17 divisas con tipos de cambio en vivo, sin clave de API.",
+  "setHome": "Divisa principal",
+  "phAmount": "Importe",
+  "tipSwap": "Intercambiar divisas",
+  "tipRefresh": "Actualizar tipos",
+  "statusLoading": "Cargando tipos…",
+  "statusError": "No se pudieron cargar los tipos",
+  "lblUpdated": "Actualizado",
+  "emptyTitle": "Aún no hay tipos",
+  "emptyHint": "Los tipos se actualizan automáticamente cada 30 minutos"
+}

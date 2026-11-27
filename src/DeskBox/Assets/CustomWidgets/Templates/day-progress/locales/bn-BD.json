@@ -1,0 +1,13 @@
+{
+  "widgetName": "দিনের অগ্রগতি",
+  "widgetDescription": "আজকের দিনের কতটা পেরিয়েছে, অতিবাহিত সময় ও মধ্যরাত পর্যন্ত বাকি সময়সহ।",
+  "setStyle": "প্রদর্শন",
+  "optRing": "রিং",
+  "optBar": "বার",
+  "setSeconds": "সেকেন্ড দেখান",
+  "subDay": "দিনের",
+  "lblElapsed": "অতিবাহিত",
+  "lblLeft": "বাকি",
+  "lblEnds": "শেষ হবে",
+  "tipRefresh": "রিফ্রেশ"
+}

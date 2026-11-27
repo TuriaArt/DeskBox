@@ -1,0 +1,13 @@
+{
+  "widgetName": "Progression du jour",
+  "widgetDescription": "Quelle part de la journée est écoulée, avec le temps passé et le temps restant avant minuit.",
+  "setStyle": "Affichage",
+  "optRing": "Anneau",
+  "optBar": "Barre",
+  "setSeconds": "Afficher les secondes",
+  "subDay": "de la journée",
+  "lblElapsed": "Écoulé",
+  "lblLeft": "Restant",
+  "lblEnds": "Se termine à",
+  "tipRefresh": "Actualiser"
+}

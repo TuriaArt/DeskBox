@@ -1,0 +1,15 @@
+{
+  "widgetName": "Einheitenrechner",
+  "widgetDescription": "Länge, Gewicht, Temperatur, Volumen, Geschwindigkeit und Datengrößen – rechnet während der Eingabe.",
+  "setPrecision": "Nachkommastellen",
+  "catLength": "Länge",
+  "catMass": "Gewicht",
+  "catTemp": "Temperatur",
+  "catVolume": "Volumen",
+  "catSpeed": "Geschwindigkeit",
+  "catData": "Daten",
+  "phValue": "Wert",
+  "btnSwap": "Tauschen",
+  "btnCopy": "Ergebnis kopieren",
+  "toastCopied": "Ergebnis kopiert"
+}

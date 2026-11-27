@@ -1,0 +1,15 @@
+{
+  "widgetName": "링크 클리너",
+  "widgetDescription": "복사한 링크에서 추적 매개변수(utm, fbclid, gclid 등)를 제거해 깨끗하게 붙여 넣을 수 있습니다.",
+  "setReferral": "추천 태그(ref, share, si)도 제거",
+  "lblClipboard": "클립보드에서",
+  "lblClean": "깨끗한 링크",
+  "lblRemoved": "제거됨",
+  "btnCopy": "깨끗한 링크 복사",
+  "btnOpen": "열기",
+  "emptyTitle": "클립보드에 링크가 없습니다",
+  "emptyHint": "아무 링크나 복사하면 여기에 깨끗한 버전이 표시됩니다.",
+  "statusClean": "이미 깨끗함",
+  "statusCopied": "깨끗한 링크를 복사했습니다",
+  "lblCleaned": "정리한 링크"
+}

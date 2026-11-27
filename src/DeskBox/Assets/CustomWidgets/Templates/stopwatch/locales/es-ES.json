@@ -1,0 +1,16 @@
+{
+  "widgetName": "Cronómetro",
+  "widgetDescription": "Inicia, pausa y marca vueltas desde la barra; la tarjeta guarda todas las vueltas.",
+  "setLapSound": "Sonido al marcar vuelta",
+  "setToggleSound": "Sonido al iniciar/pausar",
+  "lblLap": "Vuelta",
+  "btnStart": "Iniciar",
+  "btnPause": "Pausa",
+  "btnLap": "Vuelta",
+  "btnReset": "Reiniciar",
+  "lapsUnit": "vueltas",
+  "running": "en marcha",
+  "stopped": "detenido",
+  "emptyTitle": "Aún no hay vueltas",
+  "emptyHint": "Pulsa Vuelta mientras corre para guardar parciales"
+}

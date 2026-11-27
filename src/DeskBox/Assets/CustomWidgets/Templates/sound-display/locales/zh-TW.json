@@ -1,0 +1,10 @@
+{
+  "widgetName": "聲音與顯示",
+  "widgetDescription": "主音量、靜音、音訊輸出與螢幕亮度集中在一張卡片中。",
+  "lblVolume": "音量",
+  "lblBrightness": "亮度",
+  "btnOutput": "輸出裝置",
+  "btnNightLight": "夜燈",
+  "tipMute": "靜音 / 取消靜音",
+  "setBrightness": "顯示亮度（筆電與內建螢幕）"
+}

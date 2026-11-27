@@ -1,0 +1,13 @@
+{
+  "widgetName": "Währungsrechner",
+  "widgetDescription": "Umrechnung zwischen 17 Währungen mit aktuellen Kursen – ohne API-Schlüssel.",
+  "setHome": "Heimatwährung",
+  "phAmount": "Betrag",
+  "tipSwap": "Währungen tauschen",
+  "tipRefresh": "Kurse aktualisieren",
+  "statusLoading": "Kurse werden geladen…",
+  "statusError": "Kurse konnten nicht geladen werden",
+  "lblUpdated": "Aktualisiert",
+  "emptyTitle": "Noch keine Kurse",
+  "emptyHint": "Kurse werden alle 30 Minuten automatisch aktualisiert"
+}

@@ -1,0 +1,10 @@
+{
+  "widgetName": "مؤقّت",
+  "widgetDescription": "عدّ تنازلي بنقرة واحدة — اختر 1 أو 5 أو 10 أو 30 أو 60 دقيقة.",
+  "setDoneSound": "صوت عند الانتهاء",
+  "btnStart": "بدء",
+  "btnPause": "إيقاف مؤقت",
+  "btnResume": "استئناف",
+  "btnReset": "إعادة تعيين",
+  "doneToast": "انتهى المؤقّت"
+}

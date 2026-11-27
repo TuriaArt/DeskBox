@@ -1,0 +1,15 @@
+{
+  "widgetName": "त्वरित सेटिंग्स",
+  "widgetDescription": "डेस्कटॉप पर Windows के त्वरित टॉगल: Wi-Fi, Bluetooth, डार्क मोड, जगाए रखें, म्यूट और लॉक।",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "डार्क मोड",
+  "tileAwake": "जगाए रखें",
+  "tileMute": "म्यूट",
+  "tileLock": "लॉक",
+  "lockHint": "इस पीसी को लॉक करें",
+  "btnSound": "ध्वनि",
+  "btnDisplay": "डिस्प्ले",
+  "btnNetwork": "नेटवर्क",
+  "setShortcuts": "सेटिंग्स शॉर्टकट दिखाएँ"
+}

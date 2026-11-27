@@ -1,0 +1,10 @@
+{
+  "widgetName": "타이머",
+  "widgetDescription": "클릭 한 번으로 카운트다운 — 1, 5, 10, 30, 60분 중 선택하세요.",
+  "setDoneSound": "완료 시 소리",
+  "btnStart": "시작",
+  "btnPause": "일시정지",
+  "btnResume": "계속",
+  "btnReset": "초기화",
+  "doneToast": "타이머 종료"
+}

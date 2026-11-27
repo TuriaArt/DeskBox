@@ -1,0 +1,15 @@
+{
+  "widgetName": "Nettoyeur de liens",
+  "widgetDescription": "Supprime les paramètres de suivi (utm, fbclid, gclid et autres) des liens copiés pour les coller propres.",
+  "setReferral": "Supprimer aussi les balises de parrainage (ref, share, si)",
+  "lblClipboard": "Depuis le presse-papiers",
+  "lblClean": "Lien propre",
+  "lblRemoved": "Supprimés",
+  "btnCopy": "Copier le lien propre",
+  "btnOpen": "Ouvrir",
+  "emptyTitle": "Aucun lien dans le presse-papiers",
+  "emptyHint": "Copiez n’importe quel lien : sa version propre apparaîtra ici.",
+  "statusClean": "Déjà propre",
+  "statusCopied": "Lien propre copié",
+  "lblCleaned": "Liens nettoyés"
+}

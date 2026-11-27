@@ -1,0 +1,12 @@
+{
+  "widgetName": "মাসের অগ্রগতি",
+  "widgetDescription": "চলতি মাস কতদূর এগিয়েছে, পেরোনো ও বাকি দিনসহ।",
+  "setStyle": "প্রদর্শন",
+  "optRing": "রিং",
+  "optBar": "বার",
+  "subMonth": "মাসের",
+  "lblDay": "দিন",
+  "lblLeft": "বাকি",
+  "lblDaysLeft": "দিন বাকি",
+  "tipRefresh": "রিফ্রেশ"
+}

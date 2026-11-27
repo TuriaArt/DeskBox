@@ -1,0 +1,12 @@
+{
+  "widgetName": "Progreso del año",
+  "widgetDescription": "Cuánto del año ha pasado, con el día del año actual y los días restantes.",
+  "setStyle": "Visualización",
+  "optRing": "Anillo",
+  "optBar": "Barra",
+  "subYear": "del año",
+  "lblDay": "Día",
+  "lblLeft": "Quedan",
+  "lblDaysLeft": "días restantes",
+  "tipRefresh": "Actualizar"
+}

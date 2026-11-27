@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "baseLocale": "en-US",
+  "hashes": {
+    "emptyHint": "43642cdd",
+    "emptyTitle": "7997aa0d",
+    "lblUpdated": "3a5ecca1",
+    "setCoins": "7ae57d9d",
+    "setVs": "0740fa86",
+    "statusError": "d7795a20",
+    "statusLoading": "2063f445",
+    "tipRefresh": "5610b222",
+    "widgetDescription": "a1c9c6af",
+    "widgetName": "68684b78"
+  }
+}

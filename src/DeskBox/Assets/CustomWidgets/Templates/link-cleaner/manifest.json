@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.link-cleaner",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "🧹",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "clipboard-workspace",
+    "script-sandbox",
+    "visual-containers",
+    "widget-settings"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 320
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 380
+  },
+  "settings": [
+    {
+      "key": "stripReferral",
+      "type": "toggle",
+      "label": "${$i18n.setReferral}",
+      "default": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "clip",
+      "type": "clipboard",
+      "intervalMs": 1500
+    }
+  ],
+  "state": {
+    "cleanedCount": 0
+  },
+  "script": {
+    "entry": "logic.js",
+    "tickIntervalMs": 0
+  },
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$computed.capsuleSummary}",
+    "glyph": "🧹",
+    "badge": "${$computed.capsuleBadge}",
+    "primaryAction": {
+      "icon": "copy",
+      "tooltip": "${$i18n.btnCopy}",
+      "onClick": {
+        "type": "script.run",
+        "fn": "copyClean"
+      }
+    }
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "lc_source_card",
+        "lc_result_card",
+        "lc_empty_card",
+        "lc_actions",
+        "lc_footer"
+      ]
+    },
+    "lc_source_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "12,10",
+      "spacing": 4,
+      "when": "${$computed.hasLink == 'true'}",
+      "children": [
+        "lc_source_label",
+        "lc_source_text"
+      ]
+    },
+    "lc_source_label": {
+      "type": "Text",
+      "text": "${$i18n.lblClipboard}",
+      "style": "caption",
+      "color": "muted",
+      "maxLines": 1
+    },
+    "lc_source_text": {
+      "type": "Text",
+      "dir": "ltr",
+      "text": "${$computed.originalText}",
+      "style": "caption",
+      "color": "secondary",
+      "maxLines": 2
+    },
+    "lc_result_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "12,10",
+      "spacing": 6,
+      "when": "${$computed.hasLink == 'true'}",
+      "children": [
+        "lc_result_head",
+        "lc_result_text",
+        "lc_removed_text"
+      ]
+    },
+    "lc_result_head": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "verticalAlignment": "center",
+      "children": [
+        "lc_result_label",
+        "lc_status_badge"
+      ]
+    },
+    "lc_result_label": {
+      "type": "Text",
+      "column": 0,
+      "text": "${$i18n.lblClean}",
+      "style": "caption",
+      "color": "muted",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "lc_status_badge": {
+      "type": "Badge",
+      "column": 1,
+      "text": "${$computed.statusBadge}",
+      "tone": "${$computed.statusTone}",
+      "verticalAlignment": "center"
+    },
+    "lc_result_text": {
+      "type": "Text",
+      "dir": "ltr",
+      "text": "${$computed.cleanText}",
+      "style": "body",
+      "fontFamily": "mono",
+      "maxLines": 3
+    },
+    "lc_removed_text": {
+      "type": "Text",
+      "dir": "ltr",
+      "text": "${$computed.removedText}",
+      "style": "caption",
+      "color": "secondary",
+      "maxLines": 2,
+      "when": "${$computed.hasRemoved == 'true'}"
+    },
+    "lc_empty_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "12,10",
+      "spacing": 4,
+      "when": "${$computed.hasLink != 'true'}",
+      "children": [
+        "lc_empty_title",
+        "lc_empty_hint"
+      ]
+    },
+    "lc_empty_title": {
+      "type": "Text",
+      "text": "${$i18n.emptyTitle}",
+      "style": "subtitle",
+      "maxLines": 1
+    },
+    "lc_empty_hint": {
+      "type": "Text",
+      "text": "${$i18n.emptyHint}",
+      "style": "caption",
+      "color": "secondary",
+      "maxLines": 2
+    },
+    "lc_actions": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "when": "${$computed.hasLink == 'true'}",
+      "children": [
+        "lc_copy_btn",
+        "lc_open_btn"
+      ]
+    },
+    "lc_copy_btn": {
+      "type": "Button",
+      "column": 0,
+      "text": "${$i18n.btnCopy}",
+      "variant": "accent",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "copyClean"
+      }
+    },
+    "lc_open_btn": {
+      "type": "Button",
+      "column": 1,
+      "text": "${$i18n.btnOpen}",
+      "variant": "subtle",
+      "onClick": {
+        "type": "url.open",
+        "url": "${$computed.cleanUrl}"
+      }
+    },
+    "lc_footer": {
+      "type": "Text",
+      "text": "${$computed.cleanedText}",
+      "style": "caption",
+      "color": "muted",
+      "maxLines": 1
+    }
+  }
+}

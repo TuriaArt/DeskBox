@@ -1,0 +1,10 @@
+{
+  "widgetName": "Minuteur",
+  "widgetDescription": "Un compte à rebours en un clic : 1, 5, 10, 30 ou 60 minutes.",
+  "setDoneSound": "Son à la fin",
+  "btnStart": "Démarrer",
+  "btnPause": "Pause",
+  "btnResume": "Reprendre",
+  "btnReset": "Réinitialiser",
+  "doneToast": "Minuteur terminé"
+}

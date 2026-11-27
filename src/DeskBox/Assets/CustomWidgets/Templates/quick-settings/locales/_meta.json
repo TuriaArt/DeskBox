@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "baseLocale": "en-US",
+  "hashes": {
+    "btnDisplay": "34e108c0",
+    "btnNetwork": "1744b964",
+    "btnSound": "46124e02",
+    "lockHint": "63eca52c",
+    "setShortcuts": "271bade1",
+    "tileAwake": "d9a58af0",
+    "tileBluetooth": "8bb29098",
+    "tileLock": "db44b8db",
+    "tileMute": "8dd6857b",
+    "tileTheme": "9b7878ae",
+    "tileWifi": "337253f2",
+    "widgetDescription": "cb9d493d",
+    "widgetName": "d4bea702"
+  }
+}

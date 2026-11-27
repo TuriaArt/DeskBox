@@ -1,0 +1,12 @@
+{
+  "widgetName": "암호화폐 관심 목록",
+  "widgetDescription": "CoinGecko에서 가져온 코인 시세와 24시간 변동률. API 키가 필요 없습니다.",
+  "setCoins": "코인",
+  "setVs": "표시 통화",
+  "tipRefresh": "시세 새로 고침",
+  "statusLoading": "시세를 불러오는 중…",
+  "statusError": "시세를 불러오지 못했습니다",
+  "lblUpdated": "업데이트",
+  "emptyTitle": "아직 시세가 없습니다",
+  "emptyHint": "시세는 5분마다 자동으로 새로 고쳐집니다"
+}

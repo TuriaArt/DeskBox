@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.day-progress",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "🌅",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "script-sandbox",
+    "visual-containers",
+    "micro-charts",
+    "forms-inputs",
+    "widget-settings",
+    "advanced-inputs-and-styling"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 230
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 300
+  },
+  "settings": [
+    {
+      "key": "style",
+      "type": "choice",
+      "label": "${$i18n.setStyle}",
+      "default": "ring",
+      "options": [
+        {
+          "value": "ring",
+          "label": "${$i18n.optRing}"
+        },
+        {
+          "value": "bar",
+          "label": "${$i18n.optBar}"
+        }
+      ]
+    },
+    {
+      "key": "showSeconds",
+      "type": "toggle",
+      "label": "${$i18n.setSeconds}",
+      "default": true
+    }
+  ],
+  "state": {},
+  "script": {
+    "entry": "logic.js",
+    "tickIntervalMs": 30000
+  },
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$computed.capsuleSummary}",
+    "glyph": "🌅",
+    "badge": "${$computed.pctText}",
+    "progress": "${$computed.pct}",
+    "primaryAction": {
+      "icon": "refresh",
+      "tooltip": "${$i18n.tipRefresh}",
+      "onClick": {
+        "type": "script.run",
+        "fn": "refresh"
+      }
+    }
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "dp_summary_card",
+        "dp_detail_card"
+      ]
+    },
+    "dp_summary_card": {
+      "type": "Card",
+      "tone": "subtle",
+      "padding": "12,10",
+      "spacing": 8,
+      "children": [
+        "dp_summary_grid"
+      ]
+    },
+    "dp_summary_grid": {
+      "type": "Grid",
+      "columns": "Auto,*,Auto",
+      "columnSpacing": 12,
+      "verticalAlignment": "center",
+      "children": [
+        "dp_gauge",
+        "dp_bar",
+        "dp_info",
+        "dp_emoji"
+      ]
+    },
+    "dp_gauge": {
+      "type": "ZStack",
+      "column": 0,
+      "width": 92,
+      "height": 92,
+      "children": [
+        "dp_ring",
+        "dp_ring_text"
+      ],
+      "when": "${$computed.useRing}"
+    },
+    "dp_ring": {
+      "type": "RingGauge",
+      "size": 92,
+      "value": "${$computed.pct}",
+      "max": 100,
+      "unit": "%",
+      "color": "amber"
+    },
+    "dp_ring_text": {
+      "type": "Text",
+      "text": "${$computed.pctText}",
+      "style": "caption",
+      "fontWeight": "semiBold",
+      "horizontalAlignment": "center",
+      "verticalAlignment": "center"
+    },
+    "dp_bar": {
+      "type": "ProgressBar",
+      "column": 0,
+      "width": 92,
+      "value": "${$computed.pct}",
+      "max": 100,
+      "color": "amber",
+      "height": 14,
+      "verticalAlignment": "center",
+      "when": "${$computed.useBar}"
+    },
+    "dp_info": {
+      "type": "Stack",
+      "column": 1,
+      "spacing": 3,
+      "verticalAlignment": "center",
+      "children": [
+        "dp_pct_big",
+        "dp_sub"
+      ]
+    },
+    "dp_pct_big": {
+      "type": "Text",
+      "text": "${$computed.pctText}",
+      "style": "hero",
+      "dir": "ltr"
+    },
+    "dp_sub": {
+      "type": "Text",
+      "text": "${$i18n.subDay}",
+      "style": "caption",
+      "color": "secondary",
+      "maxLines": 1
+    },
+    "dp_emoji": {
+      "type": "Text",
+      "column": 2,
+      "text": "🌅",
+      "style": "body",
+      "verticalAlignment": "center"
+    },
+    "dp_detail_card": {
+      "type": "Card",
+      "tone": "default",
+      "padding": "10,10",
+      "spacing": 6,
+      "children": [
+        "dp_elapsed_row",
+        "dp_left_row",
+        "dp_end_row"
+      ]
+    },
+    "dp_elapsed_row": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "children": [
+        "dp_elapsed_lbl",
+        "dp_elapsed_val"
+      ]
+    },
+    "dp_elapsed_lbl": {
+      "type": "Text",
+      "column": 0,
+      "text": "${$i18n.lblElapsed}",
+      "style": "caption",
+      "color": "secondary"
+    },
+    "dp_elapsed_val": {
+      "type": "Text",
+      "column": 1,
+      "dir": "ltr",
+      "text": "${$computed.elapsedText}",
+      "style": "body",
+      "fontWeight": "semiBold"
+    },
+    "dp_left_row": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "children": [
+        "dp_left_lbl",
+        "dp_left_val"
+      ]
+    },
+    "dp_left_lbl": {
+      "type": "Text",
+      "column": 0,
+      "text": "${$i18n.lblLeft}",
+      "style": "caption",
+      "color": "secondary"
+    },
+    "dp_left_val": {
+      "type": "Text",
+      "column": 1,
+      "dir": "ltr",
+      "text": "${$computed.remainingText}",
+      "style": "body",
+      "fontWeight": "semiBold"
+    },
+    "dp_end_row": {
+      "type": "Grid",
+      "columns": "*,Auto",
+      "columnSpacing": 8,
+      "children": [
+        "dp_end_lbl",
+        "dp_end_val"
+      ]
+    },
+    "dp_end_lbl": {
+      "type": "Text",
+      "column": 0,
+      "text": "${$i18n.lblEnds}",
+      "style": "caption",
+      "color": "secondary"
+    },
+    "dp_end_val": {
+      "type": "Text",
+      "column": 1,
+      "dir": "ltr",
+      "text": "${$computed.endsAtText}",
+      "style": "body",
+      "fontWeight": "semiBold"
+    }
+  }
+}

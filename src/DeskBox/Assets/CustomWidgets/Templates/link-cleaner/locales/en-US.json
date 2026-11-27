@@ -1,0 +1,15 @@
+{
+  "widgetName": "Link Cleaner",
+  "widgetDescription": "Strips tracking parameters (utm, fbclid, gclid and more) from links you copy, so you can paste them clean.",
+  "setReferral": "Also remove referral tags (ref, share, si)",
+  "lblClipboard": "From clipboard",
+  "lblClean": "Clean link",
+  "lblRemoved": "Removed",
+  "btnCopy": "Copy clean link",
+  "btnOpen": "Open",
+  "emptyTitle": "No link in clipboard",
+  "emptyHint": "Copy any link and its clean version appears here.",
+  "statusClean": "Already clean",
+  "statusCopied": "Clean link copied",
+  "lblCleaned": "Links cleaned"
+}

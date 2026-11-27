@@ -1,0 +1,15 @@
+{
+  "widgetName": "単位換算",
+  "widgetDescription": "長さ・重さ・温度・体積・速度・データサイズを入力しながら換算します。",
+  "setPrecision": "小数点以下の桁数",
+  "catLength": "長さ",
+  "catMass": "重さ",
+  "catTemp": "温度",
+  "catVolume": "体積",
+  "catSpeed": "速度",
+  "catData": "データ",
+  "phValue": "値",
+  "btnSwap": "入れ替え",
+  "btnCopy": "結果をコピー",
+  "toastCopied": "結果をコピーしました"
+}

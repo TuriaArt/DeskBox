@@ -1,0 +1,15 @@
+{
+  "widgetName": "Unit Converter",
+  "widgetDescription": "Length, weight, temperature, volume, speed and data sizes — converts as you type.",
+  "setPrecision": "Decimal places",
+  "catLength": "Length",
+  "catMass": "Weight",
+  "catTemp": "Temperature",
+  "catVolume": "Volume",
+  "catSpeed": "Speed",
+  "catData": "Data",
+  "phValue": "Value",
+  "btnSwap": "Swap",
+  "btnCopy": "Copy result",
+  "toastCopied": "Result copied"
+}

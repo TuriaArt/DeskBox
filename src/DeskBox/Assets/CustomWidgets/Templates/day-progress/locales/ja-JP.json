@@ -1,0 +1,13 @@
+{
+  "widgetName": "今日の進捗",
+  "widgetDescription": "今日がどれだけ過ぎたか、経過時間と真夜中までの残り時間を表示します。",
+  "setStyle": "表示",
+  "optRing": "リング",
+  "optBar": "バー",
+  "setSeconds": "秒を表示",
+  "subDay": "今日",
+  "lblElapsed": "経過",
+  "lblLeft": "残り",
+  "lblEnds": "終了",
+  "tipRefresh": "更新"
+}

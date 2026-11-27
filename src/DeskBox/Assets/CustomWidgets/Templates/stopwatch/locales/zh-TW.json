@@ -1,0 +1,16 @@
+{
+  "widgetName": "碼錶",
+  "widgetDescription": "從工作列開始、暫停和計圈；卡片保留每一圈紀錄。",
+  "setLapSound": "計圈時播放聲音",
+  "setToggleSound": "開始/暫停時播放聲音",
+  "lblLap": "計圈",
+  "btnStart": "開始",
+  "btnPause": "暫停",
+  "btnLap": "計圈",
+  "btnReset": "重設",
+  "lapsUnit": "圈",
+  "running": "計時中",
+  "stopped": "已停止",
+  "emptyTitle": "尚無計圈紀錄",
+  "emptyHint": "計時中按「計圈」記錄分段時間"
+}

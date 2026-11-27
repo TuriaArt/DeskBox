@@ -1,0 +1,10 @@
+{
+  "widgetName": "サウンドとディスプレイ",
+  "widgetDescription": "マスター音量、ミュート、オーディオ出力、画面の明るさを 1 枚のカードに。",
+  "lblVolume": "音量",
+  "lblBrightness": "明るさ",
+  "btnOutput": "出力",
+  "btnNightLight": "夜間モード",
+  "tipMute": "ミュート / 解除",
+  "setBrightness": "明るさを表示（ノート PC・内蔵ディスプレイ）"
+}

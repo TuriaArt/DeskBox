@@ -1,0 +1,15 @@
+{
+  "widgetName": "快捷设置",
+  "widgetDescription": "桌面上的 Windows 快捷开关：Wi-Fi、蓝牙、深色模式、保持唤醒、静音和锁屏。",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "蓝牙",
+  "tileTheme": "深色模式",
+  "tileAwake": "保持唤醒",
+  "tileMute": "静音",
+  "tileLock": "锁屏",
+  "lockHint": "锁定这台电脑",
+  "btnSound": "声音",
+  "btnDisplay": "显示",
+  "btnNetwork": "网络",
+  "setShortcuts": "显示设置快捷入口"
+}

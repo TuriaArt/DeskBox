@@ -1,0 +1,15 @@
+{
+  "widgetName": "Limpiador de enlaces",
+  "widgetDescription": "Elimina los parámetros de seguimiento (utm, fbclid, gclid y más) de los enlaces que copias para pegarlos limpios.",
+  "setReferral": "Quitar también etiquetas de referido (ref, share, si)",
+  "lblClipboard": "Del portapapeles",
+  "lblClean": "Enlace limpio",
+  "lblRemoved": "Eliminado",
+  "btnCopy": "Copiar enlace limpio",
+  "btnOpen": "Abrir",
+  "emptyTitle": "No hay ningún enlace en el portapapeles",
+  "emptyHint": "Copia cualquier enlace y aquí aparecerá su versión limpia.",
+  "statusClean": "Ya está limpio",
+  "statusCopied": "Enlace limpio copiado",
+  "lblCleaned": "Enlaces limpiados"
+}

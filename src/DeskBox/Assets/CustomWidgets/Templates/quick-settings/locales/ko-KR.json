@@ -1,0 +1,15 @@
+{
+  "widgetName": "빠른 설정",
+  "widgetDescription": "바탕 화면에서 쓰는 Windows 빠른 토글: Wi-Fi, Bluetooth, 다크 모드, 절전 방지, 음소거, 잠금.",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "다크 모드",
+  "tileAwake": "절전 방지",
+  "tileMute": "음소거",
+  "tileLock": "잠금",
+  "lockHint": "이 PC 잠그기",
+  "btnSound": "소리",
+  "btnDisplay": "디스플레이",
+  "btnNetwork": "네트워크",
+  "setShortcuts": "설정 바로 가기 표시"
+}

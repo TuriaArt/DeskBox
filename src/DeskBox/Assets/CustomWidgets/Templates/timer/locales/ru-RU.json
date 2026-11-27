@@ -1,0 +1,10 @@
+{
+  "widgetName": "Таймер",
+  "widgetDescription": "Обратный отсчёт в один клик — выберите 1, 5, 10, 30 или 60 минут.",
+  "setDoneSound": "Звук по завершении",
+  "btnStart": "Старт",
+  "btnPause": "Пауза",
+  "btnResume": "Продолжить",
+  "btnReset": "Сброс",
+  "doneToast": "Таймер завершён"
+}

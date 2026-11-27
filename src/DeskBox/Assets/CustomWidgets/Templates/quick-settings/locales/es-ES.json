@@ -1,0 +1,15 @@
+{
+  "widgetName": "Ajustes rápidos",
+  "widgetDescription": "Interruptores rápidos de Windows en tu escritorio: Wi-Fi, Bluetooth, modo oscuro, mantener activo, silencio y bloqueo.",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "Modo oscuro",
+  "tileAwake": "Mantener activo",
+  "tileMute": "Silencio",
+  "tileLock": "Bloquear",
+  "lockHint": "Bloquear este PC",
+  "btnSound": "Sonido",
+  "btnDisplay": "Pantalla",
+  "btnNetwork": "Red",
+  "setShortcuts": "Mostrar accesos a Configuración"
+}

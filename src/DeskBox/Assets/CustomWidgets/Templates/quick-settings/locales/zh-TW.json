@@ -1,0 +1,15 @@
+{
+  "widgetName": "快速設定",
+  "widgetDescription": "桌面上的 Windows 快速開關：Wi-Fi、藍牙、深色模式、保持喚醒、靜音與鎖定。",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "藍牙",
+  "tileTheme": "深色模式",
+  "tileAwake": "保持喚醒",
+  "tileMute": "靜音",
+  "tileLock": "鎖定",
+  "lockHint": "鎖定這台電腦",
+  "btnSound": "聲音",
+  "btnDisplay": "顯示",
+  "btnNetwork": "網路",
+  "setShortcuts": "顯示設定捷徑"
+}

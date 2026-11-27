@@ -1,0 +1,16 @@
+{
+  "widgetName": "ストップウォッチ",
+  "widgetDescription": "バーから開始・一時停止・ラップ。カードにすべてのラップを記録します。",
+  "setLapSound": "ラップ時に音を鳴らす",
+  "setToggleSound": "開始/一時停止時に音を鳴らす",
+  "lblLap": "ラップ",
+  "btnStart": "開始",
+  "btnPause": "一時停止",
+  "btnLap": "ラップ",
+  "btnReset": "リセット",
+  "lapsUnit": "ラップ",
+  "running": "計測中",
+  "stopped": "停止",
+  "emptyTitle": "ラップはまだありません",
+  "emptyHint": "計測中に「ラップ」を押すとスプリットを記録します"
+}

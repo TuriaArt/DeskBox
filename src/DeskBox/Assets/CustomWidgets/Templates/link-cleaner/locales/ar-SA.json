@@ -1,0 +1,15 @@
+{
+  "widgetName": "منظّف الروابط",
+  "widgetDescription": "يزيل معلمات التتبّع (utm وfbclid وgclid وغيرها) من الروابط التي تنسخها لتلصقها نظيفة.",
+  "setReferral": "إزالة وسوم الإحالة أيضًا (ref وshare وsi)",
+  "lblClipboard": "من الحافظة",
+  "lblClean": "رابط نظيف",
+  "lblRemoved": "تمت الإزالة",
+  "btnCopy": "نسخ الرابط النظيف",
+  "btnOpen": "فتح",
+  "emptyTitle": "لا يوجد رابط في الحافظة",
+  "emptyHint": "انسخ أي رابط وستظهر نسخته النظيفة هنا.",
+  "statusClean": "نظيف بالفعل",
+  "statusCopied": "تم نسخ الرابط النظيف",
+  "lblCleaned": "روابط تم تنظيفها"
+}

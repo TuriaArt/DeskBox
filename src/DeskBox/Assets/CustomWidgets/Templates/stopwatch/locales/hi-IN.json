@@ -1,0 +1,16 @@
+{
+  "widgetName": "स्टॉपवॉच",
+  "widgetDescription": "बार से ही शुरू, रोकें और लैप दर्ज करें; कार्ड हर लैप सहेजता है।",
+  "setLapSound": "लैप पर ध्वनि",
+  "setToggleSound": "शुरू/रोकने पर ध्वनि",
+  "lblLap": "लैप",
+  "btnStart": "शुरू",
+  "btnPause": "रोकें",
+  "btnLap": "लैप",
+  "btnReset": "रीसेट",
+  "lapsUnit": "लैप",
+  "running": "चल रहा है",
+  "stopped": "रुका हुआ",
+  "emptyTitle": "अभी कोई लैप नहीं",
+  "emptyHint": "चलते समय लैप दबाएँ ताकि स्प्लिट दर्ज हों"
+}

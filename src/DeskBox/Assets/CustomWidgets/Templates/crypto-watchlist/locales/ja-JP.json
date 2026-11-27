@@ -1,0 +1,12 @@
+{
+  "widgetName": "暗号資産ウォッチ",
+  "widgetDescription": "CoinGecko から取得したコインの現在価格と 24 時間の変動。API キーは不要です。",
+  "setCoins": "コイン",
+  "setVs": "表示通貨",
+  "tipRefresh": "価格を更新",
+  "statusLoading": "価格を読み込み中…",
+  "statusError": "価格を読み込めませんでした",
+  "lblUpdated": "更新",
+  "emptyTitle": "価格はまだありません",
+  "emptyHint": "価格は 5 分ごとに自動更新されます"
+}

@@ -1,0 +1,13 @@
+{
+  "widgetName": "Progreso del día",
+  "widgetDescription": "Cuánto del día ya ha pasado, con el tiempo transcurrido y el que queda hasta medianoche.",
+  "setStyle": "Visualización",
+  "optRing": "Anillo",
+  "optBar": "Barra",
+  "setSeconds": "Mostrar segundos",
+  "subDay": "del día",
+  "lblElapsed": "Transcurrido",
+  "lblLeft": "Restante",
+  "lblEnds": "Termina a las",
+  "tipRefresh": "Actualizar"
+}

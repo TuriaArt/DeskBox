@@ -1,0 +1,15 @@
+{
+  "widgetName": "محوّل الوحدات",
+  "widgetDescription": "الطول والوزن والحرارة والحجم والسرعة وحجم البيانات، مع التحويل أثناء الكتابة.",
+  "setPrecision": "المنازل العشرية",
+  "catLength": "الطول",
+  "catMass": "الوزن",
+  "catTemp": "الحرارة",
+  "catVolume": "الحجم",
+  "catSpeed": "السرعة",
+  "catData": "البيانات",
+  "phValue": "القيمة",
+  "btnSwap": "تبديل",
+  "btnCopy": "نسخ النتيجة",
+  "toastCopied": "تم نسخ النتيجة"
+}

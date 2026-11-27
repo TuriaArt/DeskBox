@@ -1,0 +1,10 @@
+{
+  "widgetName": "Timer",
+  "widgetDescription": "A countdown you start in one click — pick 1, 5, 10, 30 or 60 minutes.",
+  "setDoneSound": "Sound when finished",
+  "btnStart": "Start",
+  "btnPause": "Pause",
+  "btnResume": "Resume",
+  "btnReset": "Reset",
+  "doneToast": "Timer finished"
+}

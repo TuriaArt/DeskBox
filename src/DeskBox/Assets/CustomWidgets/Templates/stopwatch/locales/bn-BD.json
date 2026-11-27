@@ -1,0 +1,16 @@
+{
+  "widgetName": "স্টপওয়াচ",
+  "widgetDescription": "বার থেকেই শুরু, বিরতি ও ল্যাপ; কার্ডে সব ল্যাপ সংরক্ষিত থাকে।",
+  "setLapSound": "ল্যাপে শব্দ",
+  "setToggleSound": "শুরু/বিরতিতে শব্দ",
+  "lblLap": "ল্যাপ",
+  "btnStart": "শুরু",
+  "btnPause": "বিরতি",
+  "btnLap": "ল্যাপ",
+  "btnReset": "রিসেট",
+  "lapsUnit": "ল্যাপ",
+  "running": "চলছে",
+  "stopped": "থেমে আছে",
+  "emptyTitle": "এখনো কোনো ল্যাপ নেই",
+  "emptyHint": "চলাকালীন ল্যাপ চাপুন, বিভাজিত সময় সংরক্ষিত হবে"
+}

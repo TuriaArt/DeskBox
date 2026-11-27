@@ -1,0 +1,15 @@
+{
+  "widgetName": "链接净化",
+  "widgetDescription": "去掉复制链接中的追踪参数（utm、fbclid、gclid 等），粘贴出去就是干净链接。",
+  "setReferral": "同时移除推荐标记（ref、share、si）",
+  "lblClipboard": "来自剪贴板",
+  "lblClean": "干净链接",
+  "lblRemoved": "已移除",
+  "btnCopy": "复制干净链接",
+  "btnOpen": "打开",
+  "emptyTitle": "剪贴板中没有链接",
+  "emptyHint": "复制任意链接，这里会显示它的干净版本。",
+  "statusClean": "已经很干净",
+  "statusCopied": "已复制干净链接",
+  "lblCleaned": "已净化链接"
+}

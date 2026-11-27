@@ -1,0 +1,13 @@
+{
+  "widgetName": "當日進度",
+  "widgetDescription": "今天已經過去多少，以及距離午夜還剩多少時間。",
+  "setStyle": "顯示",
+  "optRing": "圓環",
+  "optBar": "進度條",
+  "setSeconds": "顯示秒數",
+  "subDay": "今日",
+  "lblElapsed": "已過",
+  "lblLeft": "剩餘",
+  "lblEnds": "結束於",
+  "tipRefresh": "重新整理"
+}

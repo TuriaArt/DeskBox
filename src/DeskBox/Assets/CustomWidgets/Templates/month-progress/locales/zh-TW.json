@@ -1,0 +1,12 @@
+{
+  "widgetName": "當月進度",
+  "widgetDescription": "目前月份進行到哪了，已過去和剩餘的天數。",
+  "setStyle": "顯示",
+  "optRing": "圓環",
+  "optBar": "進度條",
+  "subMonth": "本月",
+  "lblDay": "第",
+  "lblLeft": "剩餘",
+  "lblDaysLeft": "天剩餘",
+  "tipRefresh": "重新整理"
+}

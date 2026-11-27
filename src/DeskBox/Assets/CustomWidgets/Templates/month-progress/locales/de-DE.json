@@ -1,0 +1,12 @@
+{
+  "widgetName": "Monatsfortschritt",
+  "widgetDescription": "Wie weit der aktuelle Monat fortgeschritten ist – vergangene und verbleibende Tage.",
+  "setStyle": "Darstellung",
+  "optRing": "Ring",
+  "optBar": "Balken",
+  "subMonth": "des Monats",
+  "lblDay": "Tag",
+  "lblLeft": "Übrig",
+  "lblDaysLeft": "Tage übrig",
+  "tipRefresh": "Aktualisieren"
+}

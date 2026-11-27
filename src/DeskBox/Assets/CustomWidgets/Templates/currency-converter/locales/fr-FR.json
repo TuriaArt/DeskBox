@@ -1,0 +1,13 @@
+{
+  "widgetName": "Convertisseur de devises",
+  "widgetDescription": "Convertissez entre 17 devises aux taux en direct, sans clé API.",
+  "setHome": "Devise principale",
+  "phAmount": "Montant",
+  "tipSwap": "Inverser les devises",
+  "tipRefresh": "Actualiser les taux",
+  "statusLoading": "Chargement des taux…",
+  "statusError": "Impossible de charger les taux",
+  "lblUpdated": "Mis à jour",
+  "emptyTitle": "Aucun taux pour le moment",
+  "emptyHint": "Les taux sont actualisés automatiquement toutes les 30 minutes"
+}

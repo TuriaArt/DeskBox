@@ -355,10 +355,10 @@ public sealed class CustomWidgetFlatManifestTests
     }
 
     [Fact]
-    public void All14BuiltInTemplates_AreSchemaVersion1FlatElementGraphs_WithZeroDiagnostics()
+    public void AllBuiltInTemplates_AreSchemaVersion1FlatElementGraphs_WithZeroDiagnostics()
     {
         IReadOnlyList<string> ids = CustomWidgetTemplates.BuiltInTemplateIds;
-        Assert.Equal(14, ids.Count);
+        Assert.Equal(25, ids.Count);
 
         foreach (string id in ids)
         {

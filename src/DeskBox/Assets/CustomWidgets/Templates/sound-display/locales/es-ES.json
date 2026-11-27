@@ -1,0 +1,10 @@
+{
+  "widgetName": "Sonido y pantalla",
+  "widgetDescription": "Volumen general, silencio, salida de audio y brillo de pantalla en una sola tarjeta.",
+  "lblVolume": "Volumen",
+  "lblBrightness": "Brillo",
+  "btnOutput": "Salida",
+  "btnNightLight": "Luz nocturna",
+  "tipMute": "Silenciar / activar sonido",
+  "setBrightness": "Mostrar brillo (portátiles y pantallas integradas)"
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "baseLocale": "en-US",
+  "hashes": {
+    "btnCopy": "c467973d",
+    "btnSwap": "6ec282d4",
+    "catData": "cec3a9b8",
+    "catLength": "adc95605",
+    "catMass": "81d27ef6",
+    "catSpeed": "c372fee9",
+    "catTemp": "b958ce8b",
+    "catVolume": "b10fb966",
+    "phValue": "8e37953d",
+    "setPrecision": "004a3408",
+    "toastCopied": "1b898a51",
+    "widgetDescription": "fe89349a",
+    "widgetName": "de3e449e"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "widgetName": "Temporizador",
+  "widgetDescription": "Cuenta atrás con un clic: elige 1, 5, 10, 30 o 60 minutos.",
+  "setDoneSound": "Sonido al terminar",
+  "btnStart": "Iniciar",
+  "btnPause": "Pausa",
+  "btnResume": "Reanudar",
+  "btnReset": "Reiniciar",
+  "doneToast": "Temporizador terminado"
+}

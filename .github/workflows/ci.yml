@@ -23,6 +23,8 @@ jobs:
           fetch-depth: 0
 
       - name: Commit identity and attribution check
+        # Owner-only gate for the upstream repository; forks run the rest of the pipeline.
+        if: github.repository == 'Tianyu199509/DeskBox'
         shell: pwsh
         env:
           BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
@@ -131,6 +133,23 @@ jobs:
             exit 1
           }
 
+      - name: Pack widget templates (.dbxwidget)
+        id: pack_widgets
+        shell: pwsh
+        env:
+          HEAD_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+        run: |
+          ./scripts/Pack-CustomWidgetTemplates.ps1 -Commit $env:HEAD_SHA -OutDir artifacts/widgets
+          $ver = ([regex]::Match((Get-Content -Raw src/DeskBox/Package.appxmanifest), '<Identity\b[^>]*?\sVersion="(\d+\.\d+\.\d+)')).Groups[1].Value
+          "name=DeskBox-$ver-$($env:HEAD_SHA.Substring(0, 7))_widgets" >> $env:GITHUB_OUTPUT
+
+      - name: Upload widget packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.pack_widgets.outputs.name }}
+          path: artifacts/widgets/*.dbxwidget
+          if-no-files-found: error
+
       - name: Rust native unit tests
         run: cargo test --manifest-path native/Cargo.toml --locked
 
@@ -154,6 +173,28 @@ jobs:
       - name: Test
         timeout-minutes: 10
         run: dotnet test .\tests\DeskBox.Tests\DeskBox.Tests.csproj --configuration Release --no-restore -p:Platform=x64 -p:RuntimeIdentifier=win-x64 -p:WindowsAppSdkBootstrapInitialize=false --blame-hang --blame-hang-timeout 5m --logger "trx;LogFileName=test-results.trx" -v:minimal
+
+      - name: Report failed tests as annotations
+        if: failure()
+        shell: pwsh
+        run: |
+          $trx = Get-ChildItem -Recurse -Filter *.trx tests/DeskBox.Tests/TestResults -ErrorAction SilentlyContinue
+          if (-not $trx) { Write-Host 'No .trx results found.'; exit 0 }
+          $failed = @()
+          foreach ($file in $trx) {
+            [xml]$doc = Get-Content -Raw $file.FullName
+            $failed += @($doc.TestRun.Results.UnitTestResult | Where-Object { $_.outcome -eq 'Failed' })
+          }
+          function Esc([string]$s) { return $s.Replace('%', '%25').Replace("`r", '').Replace("`n", '%0A') }
+          function EscTitle([string]$s) { return (Esc $s).Replace(':', '%3A').Replace(',', '%2C') }
+          Write-Host "Failed tests: $($failed.Count)"
+          $names = ($failed | ForEach-Object { $_.testName }) -join "`n"
+          Write-Host "::error title=Failed tests ($($failed.Count))::$(Esc $names)"
+          foreach ($t in ($failed | Select-Object -First 8)) {
+            $msg = [string]$t.Output.ErrorInfo.Message
+            if ($msg.Length -gt 1500) { $msg = $msg.Substring(0, 1500) + ' ...' }
+            Write-Host "::error title=$(EscTitle $t.testName)::$(Esc $msg)"
+          }
 
       - name: Verify Store channel compilation
         run: dotnet build .\src\DeskBox\DeskBox.csproj -t:PrepareForBuild,ResolveReferences,PrepareResources,Compile --configuration Release --no-restore --no-dependencies -p:Platform=x64 -p:RuntimeIdentifier=win-x64 -p:DeskBoxDistribution=Store -p:IntermediateOutputPath=obj\x64\Release-Store\net10.0-windows10.0.22621.0\win-x64\ -v:minimal

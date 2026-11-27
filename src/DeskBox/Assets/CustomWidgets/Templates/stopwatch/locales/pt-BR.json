@@ -1,0 +1,16 @@
+{
+  "widgetName": "Cronômetro",
+  "widgetDescription": "Inicie, pause e marque voltas pela barra; o cartão guarda todas as voltas.",
+  "setLapSound": "Som ao marcar volta",
+  "setToggleSound": "Som ao iniciar/pausar",
+  "lblLap": "Volta",
+  "btnStart": "Iniciar",
+  "btnPause": "Pausar",
+  "btnLap": "Volta",
+  "btnReset": "Zerar",
+  "lapsUnit": "voltas",
+  "running": "rodando",
+  "stopped": "parado",
+  "emptyTitle": "Nenhuma volta ainda",
+  "emptyHint": "Toque em Volta durante a contagem para registrar parciais"
+}

@@ -1,0 +1,10 @@
+{
+  "widgetName": "Som e tela",
+  "widgetDescription": "Volume geral, mudo, saída de áudio e brilho da tela em um só cartão.",
+  "lblVolume": "Volume",
+  "lblBrightness": "Brilho",
+  "btnOutput": "Saída",
+  "btnNightLight": "Luz noturna",
+  "tipMute": "Ativar / desativar som",
+  "setBrightness": "Mostrar brilho (notebooks e telas integradas)"
+}

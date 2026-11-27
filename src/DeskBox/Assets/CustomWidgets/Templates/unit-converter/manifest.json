@@ -1,0 +1,678 @@
+{
+  "schemaVersion": 1,
+  "id": "deskbox.unit-converter",
+  "name": "${$i18n.widgetName}",
+  "description": "${$i18n.widgetDescription}",
+  "icon": "📐",
+  "version": "1.0.0",
+  "author": "DeskBox",
+  "origin": "official",
+  "capabilities": [
+    "script-sandbox",
+    "forms-inputs",
+    "visual-containers",
+    "widget-settings"
+  ],
+  "minSize": {
+    "width": 280,
+    "height": 260
+  },
+  "defaultSize": {
+    "width": 320,
+    "height": 300
+  },
+  "settings": [
+    {
+      "key": "precision",
+      "type": "choice",
+      "label": "${$i18n.setPrecision}",
+      "default": "4",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        }
+      ]
+    }
+  ],
+  "state": {
+    "category": "length",
+    "amount": "1",
+    "fromUnit": "m",
+    "toUnit": "ft"
+  },
+  "script": {
+    "entry": "logic.js",
+    "tickIntervalMs": 0
+  },
+  "capsule": {
+    "title": "${$i18n.widgetName}",
+    "summary": "${$computed.capsuleSummary}",
+    "glyph": "📐",
+    "badge": "${$computed.capsuleBadge}"
+  },
+  "root": "main",
+  "elements": {
+    "main": {
+      "type": "Stack",
+      "padding": "12",
+      "spacing": 10,
+      "children": [
+        "uc_category",
+        "uc_from_row",
+        "uc_to_row",
+        "uc_formula",
+        "uc_actions"
+      ]
+    },
+    "uc_category": {
+      "type": "Select",
+      "bind": "state.category",
+      "options": [
+        {
+          "value": "length",
+          "label": "${$i18n.catLength}"
+        },
+        {
+          "value": "mass",
+          "label": "${$i18n.catMass}"
+        },
+        {
+          "value": "temperature",
+          "label": "${$i18n.catTemp}"
+        },
+        {
+          "value": "volume",
+          "label": "${$i18n.catVolume}"
+        },
+        {
+          "value": "speed",
+          "label": "${$i18n.catSpeed}"
+        },
+        {
+          "value": "data",
+          "label": "${$i18n.catData}"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "setCategory"
+      }
+    },
+    "uc_from_row": {
+      "type": "Grid",
+      "columns": "*,104",
+      "columnSpacing": 8,
+      "children": [
+        "uc_amount_input",
+        "uc_from_length",
+        "uc_from_mass",
+        "uc_from_temperature",
+        "uc_from_volume",
+        "uc_from_speed",
+        "uc_from_data"
+      ]
+    },
+    "uc_amount_input": {
+      "type": "Input",
+      "column": 0,
+      "bind": "state.amount",
+      "placeholder": "${$i18n.phValue}",
+      "onChange": {
+        "type": "script.run",
+        "fn": "onAmountInput"
+      }
+    },
+    "uc_to_row": {
+      "type": "Grid",
+      "columns": "*,104",
+      "columnSpacing": 8,
+      "children": [
+        "uc_result",
+        "uc_to_length",
+        "uc_to_mass",
+        "uc_to_temperature",
+        "uc_to_volume",
+        "uc_to_speed",
+        "uc_to_data"
+      ]
+    },
+    "uc_result": {
+      "type": "Text",
+      "column": 0,
+      "dir": "ltr",
+      "text": "${$computed.resultText}",
+      "style": "title",
+      "fontWeight": "semiBold",
+      "maxLines": 1,
+      "verticalAlignment": "center"
+    },
+    "uc_formula": {
+      "type": "Text",
+      "dir": "ltr",
+      "text": "${$computed.formulaText}",
+      "style": "caption",
+      "color": "secondary",
+      "maxLines": 1
+    },
+    "uc_actions": {
+      "type": "Grid",
+      "columns": "*,*",
+      "columnSpacing": 8,
+      "children": [
+        "uc_swap_btn",
+        "uc_copy_btn"
+      ]
+    },
+    "uc_swap_btn": {
+      "type": "Button",
+      "column": 0,
+      "text": "${$i18n.btnSwap}",
+      "variant": "subtle",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "swapUnits"
+      }
+    },
+    "uc_copy_btn": {
+      "type": "Button",
+      "column": 1,
+      "text": "${$i18n.btnCopy}",
+      "variant": "standard",
+      "horizontalAlignment": "stretch",
+      "onClick": {
+        "type": "script.run",
+        "fn": "copyResult"
+      }
+    },
+    "uc_from_length": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.fromUnit",
+      "when": "${$state.category == 'length'}",
+      "options": [
+        {
+          "value": "mm",
+          "label": "mm"
+        },
+        {
+          "value": "cm",
+          "label": "cm"
+        },
+        {
+          "value": "m",
+          "label": "m"
+        },
+        {
+          "value": "km",
+          "label": "km"
+        },
+        {
+          "value": "in",
+          "label": "in"
+        },
+        {
+          "value": "ft",
+          "label": "ft"
+        },
+        {
+          "value": "yd",
+          "label": "yd"
+        },
+        {
+          "value": "mi",
+          "label": "mi"
+        },
+        {
+          "value": "nmi",
+          "label": "nmi"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_to_length": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.toUnit",
+      "when": "${$state.category == 'length'}",
+      "options": [
+        {
+          "value": "mm",
+          "label": "mm"
+        },
+        {
+          "value": "cm",
+          "label": "cm"
+        },
+        {
+          "value": "m",
+          "label": "m"
+        },
+        {
+          "value": "km",
+          "label": "km"
+        },
+        {
+          "value": "in",
+          "label": "in"
+        },
+        {
+          "value": "ft",
+          "label": "ft"
+        },
+        {
+          "value": "yd",
+          "label": "yd"
+        },
+        {
+          "value": "mi",
+          "label": "mi"
+        },
+        {
+          "value": "nmi",
+          "label": "nmi"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_from_mass": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.fromUnit",
+      "when": "${$state.category == 'mass'}",
+      "options": [
+        {
+          "value": "mg",
+          "label": "mg"
+        },
+        {
+          "value": "g",
+          "label": "g"
+        },
+        {
+          "value": "kg",
+          "label": "kg"
+        },
+        {
+          "value": "t",
+          "label": "t"
+        },
+        {
+          "value": "oz",
+          "label": "oz"
+        },
+        {
+          "value": "lb",
+          "label": "lb"
+        },
+        {
+          "value": "st",
+          "label": "st"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_to_mass": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.toUnit",
+      "when": "${$state.category == 'mass'}",
+      "options": [
+        {
+          "value": "mg",
+          "label": "mg"
+        },
+        {
+          "value": "g",
+          "label": "g"
+        },
+        {
+          "value": "kg",
+          "label": "kg"
+        },
+        {
+          "value": "t",
+          "label": "t"
+        },
+        {
+          "value": "oz",
+          "label": "oz"
+        },
+        {
+          "value": "lb",
+          "label": "lb"
+        },
+        {
+          "value": "st",
+          "label": "st"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_from_temperature": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.fromUnit",
+      "when": "${$state.category == 'temperature'}",
+      "options": [
+        {
+          "value": "c",
+          "label": "°C"
+        },
+        {
+          "value": "f",
+          "label": "°F"
+        },
+        {
+          "value": "k",
+          "label": "K"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_to_temperature": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.toUnit",
+      "when": "${$state.category == 'temperature'}",
+      "options": [
+        {
+          "value": "c",
+          "label": "°C"
+        },
+        {
+          "value": "f",
+          "label": "°F"
+        },
+        {
+          "value": "k",
+          "label": "K"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_from_volume": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.fromUnit",
+      "when": "${$state.category == 'volume'}",
+      "options": [
+        {
+          "value": "ml",
+          "label": "ml"
+        },
+        {
+          "value": "l",
+          "label": "l"
+        },
+        {
+          "value": "m3",
+          "label": "m³"
+        },
+        {
+          "value": "tsp",
+          "label": "tsp"
+        },
+        {
+          "value": "tbsp",
+          "label": "tbsp"
+        },
+        {
+          "value": "floz",
+          "label": "fl oz"
+        },
+        {
+          "value": "cup",
+          "label": "cup"
+        },
+        {
+          "value": "pt",
+          "label": "pt"
+        },
+        {
+          "value": "gal",
+          "label": "gal"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_to_volume": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.toUnit",
+      "when": "${$state.category == 'volume'}",
+      "options": [
+        {
+          "value": "ml",
+          "label": "ml"
+        },
+        {
+          "value": "l",
+          "label": "l"
+        },
+        {
+          "value": "m3",
+          "label": "m³"
+        },
+        {
+          "value": "tsp",
+          "label": "tsp"
+        },
+        {
+          "value": "tbsp",
+          "label": "tbsp"
+        },
+        {
+          "value": "floz",
+          "label": "fl oz"
+        },
+        {
+          "value": "cup",
+          "label": "cup"
+        },
+        {
+          "value": "pt",
+          "label": "pt"
+        },
+        {
+          "value": "gal",
+          "label": "gal"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_from_speed": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.fromUnit",
+      "when": "${$state.category == 'speed'}",
+      "options": [
+        {
+          "value": "mps",
+          "label": "m/s"
+        },
+        {
+          "value": "kmh",
+          "label": "km/h"
+        },
+        {
+          "value": "mph",
+          "label": "mph"
+        },
+        {
+          "value": "kn",
+          "label": "kn"
+        },
+        {
+          "value": "fps",
+          "label": "ft/s"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_to_speed": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.toUnit",
+      "when": "${$state.category == 'speed'}",
+      "options": [
+        {
+          "value": "mps",
+          "label": "m/s"
+        },
+        {
+          "value": "kmh",
+          "label": "km/h"
+        },
+        {
+          "value": "mph",
+          "label": "mph"
+        },
+        {
+          "value": "kn",
+          "label": "kn"
+        },
+        {
+          "value": "fps",
+          "label": "ft/s"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_from_data": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.fromUnit",
+      "when": "${$state.category == 'data'}",
+      "options": [
+        {
+          "value": "bit",
+          "label": "bit"
+        },
+        {
+          "value": "b",
+          "label": "B"
+        },
+        {
+          "value": "kb",
+          "label": "KB"
+        },
+        {
+          "value": "mb",
+          "label": "MB"
+        },
+        {
+          "value": "gb",
+          "label": "GB"
+        },
+        {
+          "value": "tb",
+          "label": "TB"
+        },
+        {
+          "value": "kib",
+          "label": "KiB"
+        },
+        {
+          "value": "mib",
+          "label": "MiB"
+        },
+        {
+          "value": "gib",
+          "label": "GiB"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    },
+    "uc_to_data": {
+      "type": "Select",
+      "column": 1,
+      "bind": "state.toUnit",
+      "when": "${$state.category == 'data'}",
+      "options": [
+        {
+          "value": "bit",
+          "label": "bit"
+        },
+        {
+          "value": "b",
+          "label": "B"
+        },
+        {
+          "value": "kb",
+          "label": "KB"
+        },
+        {
+          "value": "mb",
+          "label": "MB"
+        },
+        {
+          "value": "gb",
+          "label": "GB"
+        },
+        {
+          "value": "tb",
+          "label": "TB"
+        },
+        {
+          "value": "kib",
+          "label": "KiB"
+        },
+        {
+          "value": "mib",
+          "label": "MiB"
+        },
+        {
+          "value": "gib",
+          "label": "GiB"
+        }
+      ],
+      "onChange": {
+        "type": "script.run",
+        "fn": "recalc"
+      }
+    }
+  }
+}

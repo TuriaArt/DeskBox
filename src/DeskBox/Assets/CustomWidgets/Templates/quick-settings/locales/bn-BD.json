@@ -1,0 +1,15 @@
+{
+  "widgetName": "দ্রুত সেটিংস",
+  "widgetDescription": "ডেস্কটপে Windows-এর দ্রুত টগল: Wi-Fi, Bluetooth, ডার্ক মোড, জাগিয়ে রাখা, মিউট ও লক।",
+  "tileWifi": "Wi-Fi",
+  "tileBluetooth": "Bluetooth",
+  "tileTheme": "ডার্ক মোড",
+  "tileAwake": "জাগিয়ে রাখুন",
+  "tileMute": "মিউট",
+  "tileLock": "লক",
+  "lockHint": "এই পিসি লক করুন",
+  "btnSound": "সাউন্ড",
+  "btnDisplay": "ডিসপ্লে",
+  "btnNetwork": "নেটওয়ার্ক",
+  "setShortcuts": "সেটিংসের শর্টকাট দেখান"
+}

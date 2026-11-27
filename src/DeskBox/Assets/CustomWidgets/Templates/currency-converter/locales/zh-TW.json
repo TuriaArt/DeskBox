@@ -1,0 +1,13 @@
+{
+  "widgetName": "匯率換算",
+  "widgetDescription": "依即時匯率在 17 種貨幣之間換算，不需要 API 金鑰。",
+  "setHome": "本國貨幣",
+  "phAmount": "金額",
+  "tipSwap": "交換貨幣",
+  "tipRefresh": "重新整理匯率",
+  "statusLoading": "正在載入匯率…",
+  "statusError": "無法載入匯率",
+  "lblUpdated": "更新於",
+  "emptyTitle": "尚無匯率",
+  "emptyHint": "匯率每 30 分鐘自動更新"
+}

@@ -1,0 +1,12 @@
+{
+  "widgetName": "Month Progress",
+  "widgetDescription": "How far through the current month you are, with days passed and days left.",
+  "setStyle": "Display",
+  "optRing": "Ring",
+  "optBar": "Bar",
+  "subMonth": "of the month",
+  "lblDay": "Day",
+  "lblLeft": "Left",
+  "lblDaysLeft": "days left",
+  "tipRefresh": "Refresh"
+}

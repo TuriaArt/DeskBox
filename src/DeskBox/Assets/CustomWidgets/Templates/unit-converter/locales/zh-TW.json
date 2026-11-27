@@ -1,0 +1,15 @@
+{
+  "widgetName": "單位換算",
+  "widgetDescription": "長度、重量、溫度、容量、速度與資料大小，輸入即換算。",
+  "setPrecision": "小數位數",
+  "catLength": "長度",
+  "catMass": "重量",
+  "catTemp": "溫度",
+  "catVolume": "容量",
+  "catSpeed": "速度",
+  "catData": "資料",
+  "phValue": "數值",
+  "btnSwap": "交換",
+  "btnCopy": "複製結果",
+  "toastCopied": "已複製結果"
+}

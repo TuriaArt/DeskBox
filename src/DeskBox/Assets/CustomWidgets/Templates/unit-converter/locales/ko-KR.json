@@ -1,0 +1,15 @@
+{
+  "widgetName": "단위 변환기",
+  "widgetDescription": "길이, 무게, 온도, 부피, 속도, 데이터 크기를 입력하는 즉시 변환합니다.",
+  "setPrecision": "소수 자릿수",
+  "catLength": "길이",
+  "catMass": "무게",
+  "catTemp": "온도",
+  "catVolume": "부피",
+  "catSpeed": "속도",
+  "catData": "데이터",
+  "phValue": "값",
+  "btnSwap": "바꾸기",
+  "btnCopy": "결과 복사",
+  "toastCopied": "결과를 복사했습니다"
+}

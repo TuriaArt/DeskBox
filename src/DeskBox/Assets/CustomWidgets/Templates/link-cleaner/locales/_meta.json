@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "baseLocale": "en-US",
+  "hashes": {
+    "btnCopy": "e505a818",
+    "btnOpen": "ed077f3d",
+    "emptyHint": "def5429d",
+    "emptyTitle": "28f2d51c",
+    "lblClean": "5f97e58f",
+    "lblCleaned": "da561806",
+    "lblClipboard": "03d901e8",
+    "lblRemoved": "4118fb4f",
+    "setReferral": "7f2e7489",
+    "statusClean": "4ee5bee7",
+    "statusCopied": "1c2e3a69",
+    "widgetDescription": "0c180bcf",
+    "widgetName": "66f87138"
+  }
+}

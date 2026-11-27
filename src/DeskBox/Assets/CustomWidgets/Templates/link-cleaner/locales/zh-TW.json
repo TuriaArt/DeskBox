@@ -1,0 +1,15 @@
+{
+  "widgetName": "連結淨化",
+  "widgetDescription": "移除複製連結中的追蹤參數（utm、fbclid、gclid 等），貼上時就是乾淨連結。",
+  "setReferral": "同時移除推薦標記（ref、share、si）",
+  "lblClipboard": "來自剪貼簿",
+  "lblClean": "乾淨連結",
+  "lblRemoved": "已移除",
+  "btnCopy": "複製乾淨連結",
+  "btnOpen": "開啟",
+  "emptyTitle": "剪貼簿中沒有連結",
+  "emptyHint": "複製任何連結，這裡會顯示它的乾淨版本。",
+  "statusClean": "已經很乾淨",
+  "statusCopied": "已複製乾淨連結",
+  "lblCleaned": "已淨化連結"
+}

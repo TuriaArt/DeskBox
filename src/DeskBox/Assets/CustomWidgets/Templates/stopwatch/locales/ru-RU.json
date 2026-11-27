@@ -1,0 +1,16 @@
+{
+  "widgetName": "Секундомер",
+  "widgetDescription": "Старт, пауза и круги прямо с панели; все круги сохраняются.",
+  "setLapSound": "Звук при круге",
+  "setToggleSound": "Звук при старте/паузе",
+  "lblLap": "Круг",
+  "btnStart": "Старт",
+  "btnPause": "Пауза",
+  "btnLap": "Круг",
+  "btnReset": "Сброс",
+  "lapsUnit": "круга",
+  "running": "идёт",
+  "stopped": "стоп",
+  "emptyTitle": "Кругов нет",
+  "emptyHint": "Нажмите «Круг» во время работы, чтобы записать отрезки"
+}
