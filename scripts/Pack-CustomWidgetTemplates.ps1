@@ -15,6 +15,10 @@
 .PARAMETER OutDir
     Output folder (default: artifacts/widgets, which is git-ignored).
 
+.PARAMETER Commit
+    Commit id to put into file names (default: git HEAD). CI passes the PR head commit,
+    because pull_request runs check out a temporary merge commit.
+
 .PARAMETER PlainNames
     Name files just "<id>.dbxwidget". By default names carry the app version and git commit
     the packages were built from, e.g. "DeskBox-1.6.2-d3f7263_timer.dbxwidget", so packages
@@ -34,6 +38,8 @@ param(
     ),
 
     [string]$OutDir = "",
+
+    [string]$Commit = "",
 
     [switch]$PlainNames
 )
@@ -60,15 +66,21 @@ if (-not $PlainNames) {
         $match = [regex]::Match((Get-Content -Raw $appxManifest), '<Identity\b[^>]*?\sVersion="(\d+\.\d+\.\d+)')
         if ($match.Success) { $appVersion = $match.Groups[1].Value }
     }
-    $commit = "local"
-    try {
-        $sha = (& git -C $repoRoot rev-parse --short=7 HEAD 2>$null)
-        if ($LASTEXITCODE -eq 0 -and $sha) { $commit = $sha.Trim() }
-        & git -C $repoRoot diff --quiet HEAD -- "src/DeskBox/Assets/CustomWidgets/Templates" 2>$null
-        if ($LASTEXITCODE -ne 0) { $commit += "-dirty" }
+    $commitTag = "local"
+    if (-not [string]::IsNullOrWhiteSpace($Commit)) {
+        $trimmed = $Commit.Trim()
+        $commitTag = $trimmed.Substring(0, [Math]::Min(7, $trimmed.Length))
     }
-    catch { }
-    $prefix = "DeskBox-$appVersion-${commit}_"
+    else {
+        try {
+            $sha = (& git -C $repoRoot rev-parse --short=7 HEAD 2>$null)
+            if ($LASTEXITCODE -eq 0 -and $sha) { $commitTag = $sha.Trim() }
+            & git -C $repoRoot diff --quiet HEAD -- "src/DeskBox/Assets/CustomWidgets/Templates" 2>$null
+            if ($LASTEXITCODE -ne 0) { $commitTag += "-dirty" }
+        }
+        catch { }
+    }
+    $prefix = "DeskBox-$appVersion-${commitTag}_"
 }
 
 if ($Id.Count -eq 1 -and $Id[0] -eq "*") {

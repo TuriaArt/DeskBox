@@ -133,6 +133,23 @@ jobs:
             exit 1
           }
 
+      - name: Pack widget templates (.dbxwidget)
+        id: pack_widgets
+        shell: pwsh
+        env:
+          HEAD_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+        run: |
+          ./scripts/Pack-CustomWidgetTemplates.ps1 -Commit $env:HEAD_SHA -OutDir artifacts/widgets
+          $ver = ([regex]::Match((Get-Content -Raw src/DeskBox/Package.appxmanifest), '<Identity\b[^>]*?\sVersion="(\d+\.\d+\.\d+)')).Groups[1].Value
+          "name=DeskBox-$ver-$($env:HEAD_SHA.Substring(0, 7))_widgets" >> $env:GITHUB_OUTPUT
+
+      - name: Upload widget packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.pack_widgets.outputs.name }}
+          path: artifacts/widgets/*.dbxwidget
+          if-no-files-found: error
+
       - name: Rust native unit tests
         run: cargo test --manifest-path native/Cargo.toml --locked
 
